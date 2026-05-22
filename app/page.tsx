@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import GHLForm from "@/components/GHLForm";
+import { homepageGalleryImages } from "@/lib/gallery";
 import TrustBar from "@/components/TrustBar";
 import CTABand from "@/components/CTABand";
 import ReviewCard from "@/components/ReviewCard";
@@ -292,26 +293,27 @@ export default function HomePage() {
             subtitle="Real results from Net Automotive Detailing jobs across Oahu."
           />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-            {[
-              "Before and after interior detail — Honolulu sedan",
-              "Exterior detail results — Pearl City SUV",
-              "Headlight restoration — before and after Oahu",
-              "Carpet shampoo before and after — Kailua vehicle",
-              "Leather conditioning results — Hawaii Kai luxury car",
-              "Rim detailing before and after — Kapolei truck",
-            ].map((alt, i) => (
-              <div
-                key={i}
-                className="aspect-video rounded-xl flex items-center justify-center"
-                style={{ backgroundColor: "#F4F6F9", border: "2px dashed #B1D1E7" }}
-                role="img"
-                aria-label={alt}
+            {homepageGalleryImages.map((img) => (
+              <Link
+                key={img.src}
+                href="/gallery"
+                className="group relative aspect-video rounded-xl overflow-hidden block"
+                style={{ border: "1px solid #B1D1E7" }}
+                aria-label={img.title}
               >
-                <div className="text-center p-4">
-                  <div className="text-3xl mb-2" aria-hidden="true">📷</div>
-                  <p className="text-xs" style={{ color: "#6B7A90" }}>Photo coming soon</p>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs font-semibold truncate">{img.title}</p>
+                  <p className="text-white/80 text-xs">{img.locationLabel}, Oahu</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="text-center">
