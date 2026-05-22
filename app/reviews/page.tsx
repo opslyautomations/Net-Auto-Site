@@ -59,6 +59,48 @@ const reviews = [
     text: "Best mobile detailing on the island. They took care of my leather seats, which had been looking faded from the marina salt air. The conditioning treatment made a huge difference. Eli's team is professional and clearly knows what they're doing in Hawaii's climate.",
     date: "April 2025",
   },
+  {
+    reviewerName: "Derek A.",
+    location: "Mililani, Oahu",
+    rating: 5 as const,
+    text: "Had them detail my wife's minivan and my truck back-to-back. Both came out absolutely spotless. The team works fast without cutting corners, and the pricing was totally fair for the level of work. This is now our go-to for the whole family's cars.",
+    date: "April 2025",
+  },
+  {
+    reviewerName: "Leilani P.",
+    location: "Manoa, Oahu",
+    rating: 5 as const,
+    text: "I had gotten a lot of mildew smell in my car from parking in the garage during the rainy season. They did an interior steam and deodorize and the smell was completely gone. Super impressed. Scheduling was easy and they showed up exactly on time.",
+    date: "May 2025",
+  },
+  {
+    reviewerName: "Chris V.",
+    location: "Ewa Beach, Oahu",
+    rating: 5 as const,
+    text: "Finally found a detailer who actually understands what salt air does to a car on Oahu. My paint was getting oxidized and the clay bar + wax combo they did made it look years younger. Booking again in 3 months as a maintenance treatment.",
+    date: "May 2025",
+  },
+  {
+    reviewerName: "Anuhea K.",
+    location: "Haleiwa, Oahu",
+    rating: 5 as const,
+    text: "My Jeep Wrangler was absolutely destroyed inside from beach days and surf gear. They got every grain of sand out and the seats look brand new. Living on the North Shore, I need a detailer who gets the lifestyle — these guys do. Five stars all day.",
+    date: "May 2025",
+  },
+  {
+    reviewerName: "James O.",
+    location: "Aiea, Oahu",
+    rating: 5 as const,
+    text: "Quick, thorough, and professional. I work long hours and having them come to my workplace parking lot was incredibly convenient. The exterior detail made my car look better than it has since I drove it off the lot. Will be recommending to coworkers.",
+    date: "June 2025",
+  },
+  {
+    reviewerName: "Tiana L.",
+    location: "Waimanalo Beach, Oahu",
+    rating: 5 as const,
+    text: "Honestly I was skeptical about mobile detailing but these guys changed my mind completely. The attention to detail was top-notch. Every corner of the interior was cleaned, windows were crystal clear, and the car smelled amazing after. Worth every penny.",
+    date: "June 2025",
+  },
 ];
 
 const breadcrumbs = [
@@ -71,7 +113,7 @@ export default function ReviewsPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema(5.0, reviews.length)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema(5.0, 60)) }}
       />
       <script
         type="application/ld+json"
@@ -91,7 +133,7 @@ export default function ReviewsPage() {
             ))}
           </div>
           <p className="text-lg" style={{ color: "rgba(255,255,255,0.8)" }}>
-            Real reviews from real Oahu drivers — verified on our Google Business Profile.
+            Over 60 five-star reviews from real Oahu drivers — verified on Google.
           </p>
         </div>
       </section>
@@ -104,7 +146,7 @@ export default function ReviewsPage() {
             <p className="text-white/90 font-semibold">Average Google Rating</p>
           </div>
           <div className="text-center">
-            <p className="text-white font-bold text-xl">{reviews.length}+ Reviews</p>
+            <p className="text-white font-bold text-xl">60+ Five-Star Reviews</p>
             <p className="text-white/90 text-sm">Verified Google Business Profile</p>
           </div>
           <a

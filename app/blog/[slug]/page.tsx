@@ -1,12 +1,51 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import CTABand from "@/components/CTABand";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { blogPosts, getBlogPostBySlug, getRecentPosts } from "@/lib/blogPosts";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+
+function renderInline(text: string, kp = ""): ReactNode {
+  const parts: ReactNode[] = [];
+  let remaining = text;
+  let idx = 0;
+
+  while (remaining.length > 0) {
+    const boldM = remaining.match(/\*\*(.+?)\*\*/);
+    const linkM = remaining.match(/\[([^\]]+)\]\(([^)]+)\)/);
+    const bi = boldM ? remaining.indexOf(boldM[0]) : Infinity;
+    const li = linkM ? remaining.indexOf(linkM[0]) : Infinity;
+
+    if (bi === Infinity && li === Infinity) {
+      parts.push(remaining);
+      break;
+    }
+
+    if (bi <= li) {
+      if (bi > 0) parts.push(remaining.slice(0, bi));
+      parts.push(<strong key={`${kp}b${idx++}`}>{renderInline(boldM![1], `${kp}b${idx}`)}</strong>);
+      remaining = remaining.slice(bi + boldM![0].length);
+    } else {
+      if (li > 0) parts.push(remaining.slice(0, li));
+      const href = linkM![2];
+      const label = linkM![1];
+      if (href.startsWith("/") || href.startsWith("#")) {
+        parts.push(<Link key={`${kp}l${idx++}`} href={href} style={{ color: "#F08C2A", textDecoration: "underline" }}>{label}</Link>);
+      } else {
+        parts.push(<a key={`${kp}l${idx++}`} href={href} target="_blank" rel="noopener noreferrer" style={{ color: "#F08C2A", textDecoration: "underline" }}>{label}</a>);
+      }
+      remaining = remaining.slice(li + linkM![0].length);
+    }
+  }
+
+  if (parts.length === 0) return null;
+  if (parts.length === 1) return parts[0];
+  return <>{parts}</>;
+}
 
 export async function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -106,42 +145,40 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {post.content.trim().split("\n").map((line, i) => {
                 const trimmed = line.trim();
                 if (!trimmed) return null;
+                if (trimmed.startsWith("| ")) return null;
 
                 if (trimmed.startsWith("## ")) {
                   return (
                     <h2 key={i} className="text-2xl font-bold mt-8 mb-4" style={{ color: "#0A1F3D" }}>
-                      {trimmed.replace("## ", "")}
+                      {renderInline(trimmed.slice(3), `h2-${i}`)}
                     </h2>
                   );
                 }
                 if (trimmed.startsWith("### ")) {
                   return (
                     <h3 key={i} className="text-xl font-bold mt-6 mb-3" style={{ color: "#0A1F3D" }}>
-                      {trimmed.replace("### ", "")}
+                      {renderInline(trimmed.slice(4), `h3-${i}`)}
                     </h3>
                   );
-                }
-                if (trimmed.startsWith("| ")) {
-                  return null; // Table handling simplified — skip raw markdown tables
                 }
                 if (trimmed.startsWith("- ")) {
                   return (
                     <li key={i} className="ml-4 mb-2 text-base leading-relaxed list-disc" style={{ color: "#0A1F3D" }}>
-                      {trimmed.slice(2)}
+                      {renderInline(trimmed.slice(2), `li-${i}`)}
                     </li>
                   );
                 }
-                if (trimmed.startsWith("1. ") || trimmed.match(/^\d+\.\s/)) {
+                if (trimmed.match(/^\d+\.\s/)) {
                   return (
                     <li key={i} className="ml-4 mb-2 text-base leading-relaxed list-decimal" style={{ color: "#0A1F3D" }}>
-                      {trimmed.replace(/^\d+\.\s/, "")}
+                      {renderInline(trimmed.replace(/^\d+\.\s/, ""), `ol-${i}`)}
                     </li>
                   );
                 }
 
                 return (
                   <p key={i} className="text-base leading-relaxed mb-4" style={{ color: "#0A1F3D" }}>
-                    {trimmed}
+                    {renderInline(trimmed, `p-${i}`)}
                   </p>
                 );
               })}

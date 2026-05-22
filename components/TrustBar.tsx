@@ -1,7 +1,7 @@
 const items = [
+  { icon: "⭐", label: "60+ Five-Star Reviews" },
   { icon: "🚐", label: "Mobile Service" },
   { icon: "📅", label: "Same-Week Availability" },
-  { icon: "🏅", label: "Trained Detailers" },
   { icon: "✅", label: "Satisfaction Guaranteed" },
 ];
 

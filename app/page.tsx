@@ -120,7 +120,7 @@ export default function HomePage() {
 
               {/* Trust Row */}
               <div className="flex flex-wrap gap-4 mb-8 text-sm font-medium" style={{ color: "#B1D1E7" }}>
-                <span>⭐ 5-Star Rated</span>
+                <span>⭐ 60+ Five-Star Reviews</span>
                 <span>📍 All of Oahu</span>
                 <span>🚐 Mobile Service</span>
                 <span>💧 Eco-Friendly</span>
@@ -331,8 +331,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <SectionHeader
             label="What Clients Say"
-            title="What Oahu Drivers Are Saying"
-            subtitle="Real reviews from our happy clients across the island."
+            title="60+ Five-Star Reviews on Google"
+            subtitle="Real reviews from happy Oahu drivers — verified on our Google Business Profile."
           />
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {reviews.map((review) => (

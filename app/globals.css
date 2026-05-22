@@ -32,11 +32,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #0A1F3D;
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #0A1F3D;
+  }
 }
 
 :focus-visible {
