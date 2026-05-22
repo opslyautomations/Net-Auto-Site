@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Net Automotive Detailing — Production Website
 
-## Getting Started
+**Domain:** www.netautomotivedetailing.com  
+**Stack:** Next.js 16 · TypeScript · Tailwind CSS v4 · App Router  
+**Owner:** Eli · (808) 777-8964 · office@netautomotivedetailing.com
 
-First, run the development server:
+---
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # Dev server at localhost:3000
+npm run build      # Production build
+npm run start      # Start production server
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Note:** If `npm run build` fails with a module resolution error, use:
+```bash
+node node_modules/next/dist/bin/next build
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Site Structure — 57 Total Routes
 
-## Learn More
+| Section | Count |
+|---------|-------|
+| Static pages (home, about, reviews, etc.) | 10 |
+| Service pages `/services/[slug]` | 10 |
+| Location pages `/service-areas/[slug]` | 19 |
+| Blog posts `/blog/[slug]` | 20 |
+| sitemap.xml + robots.txt + llms.txt | 3 |
+| custom 404 not-found | 1 |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Files
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| File | Purpose |
+|------|---------|
+| `lib/services.ts` | All 10 service definitions |
+| `lib/locations.ts` | All 19 location definitions |
+| `lib/blogPosts.ts` | All 20 blog posts with full content |
+| `lib/schema.ts` | JSON-LD schema builders |
+| `lib/seo.ts` | buildMetadata() helper |
+| `lib/constants.ts` | NAP, site config constants |
+| `components/GHLForm.tsx` | GoHighLevel form embed component |
+| `app/layout.tsx` | Root layout — GHL scripts loaded here |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## GoHighLevel Integration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Form ID:** `ABvoqJpqtmxcoFgbknFG`
+- **Chat Widget ID:** `69a639dba27e8c57320e7fb7`
+- Form script: `strategy="lazyOnload"` in root layout (loads once site-wide)
+- Chat widget: `strategy="afterInteractive"` in root layout (loads once site-wide)
+
+---
+
+## Deployment (Vercel)
+
+1. Push to GitHub
+2. Connect to Vercel project
+3. Set custom domain: `www.netautomotivedetailing.com`
+4. Deploy
+
+---
+
+## Post-Launch Checklist
+
+- [ ] Submit `/sitemap.xml` to Google Search Console
+- [ ] Submit `/sitemap.xml` to Bing Webmaster Tools  
+- [ ] Verify domain in Google Search Console
+- [ ] Link Google Business Profile to the website URL
+- [ ] Test GHL form → confirm submission reaches Eli's pipeline
+- [ ] Test GHL chat widget → confirm it connects to LeadConnector account
+- [ ] Add real before/after photos to `/public/images/` and gallery page
+- [ ] Add owner bio for Eli in `app/about/page.tsx` (marked TODO)
+- [ ] Confirm business hours with Eli and update in `lib/constants.ts`
+- [ ] Add Facebook/Instagram URLs to `lib/constants.ts` sameAs array when live
+- [ ] Review Privacy Policy and Terms of Service with legal counsel
+- [ ] Create OG images (1200×630px) in `/public/og/` for each page type
+- [ ] Validate pages with opengraph.xyz and Facebook Sharing Debugger
+- [ ] Run Lighthouse audit on homepage, 1 service page, 1 location page, 1 blog post
+
+---
+
+## Brand Colors
+
+| Name | Hex |
+|------|-----|
+| Navy (primary/bg) | `#0A1F3D` |
+| Gold (CTA/accent) | `#F08C2A` |
+| Light Blue | `#B1D1E7` |
+| Soft Gray (section bg) | `#F4F6F9` |
+| Muted Text | `#6B7A90` |
+
+---
+
+## TODO Items in Code
+
+- `app/about/page.tsx` — Owner bio placeholder
+- `app/contact/page.tsx` — Confirm hours with Eli
+- `app/privacy/page.tsx` — Needs legal review
+- `app/terms/page.tsx` — Needs legal review
+- `public/og/` — OG images needed (1200×630px per page type)
+- `public/images/` — Real before/after gallery photos
+
+---
+
+## Security Headers
+
+Configured in `next.config.ts` — X-Frame-Options, X-Content-Type-Options,
+Referrer-Policy, Permissions-Policy, HSTS, Content-Security-Policy.
