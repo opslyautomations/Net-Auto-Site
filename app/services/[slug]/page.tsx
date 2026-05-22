@@ -99,16 +99,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {/* Quote Form (top) */}
-      <section id="service-form" className="py-12 px-4 scroll-mt-16" style={{ backgroundColor: "#F4F6F9" }}>
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-6" style={{ color: "#0A1F3D" }}>
-            Request a Quote for {service.name}
-          </h2>
-          <GHLForm />
-        </div>
-      </section>
-
       {/* Intro */}
       <section className="py-16 px-4" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-4xl mx-auto">
@@ -221,8 +211,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {/* Bottom Form */}
-      <section className="py-16 px-4" style={{ backgroundColor: "#F4F6F9" }}>
+      {/* Quote Form */}
+      <section id="service-form" className="py-16 px-4 scroll-mt-16" style={{ backgroundColor: "#F4F6F9" }}>
         <div className="max-w-2xl mx-auto">
           <SectionHeader
             title="Ready to Book Your Service?"
