@@ -96,16 +96,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </div>
       </section>
 
-      {/* Top Quote Form */}
-      <section id="location-form" className="py-12 px-4 scroll-mt-16" style={{ backgroundColor: "#F4F6F9" }}>
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-6" style={{ color: "#0A1F3D" }}>
-            Request Mobile Detailing in {location.name}
-          </h2>
-          <GHLForm />
-        </div>
-      </section>
-
       {/* Local Intro */}
       <section className="py-16 px-4" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-4xl mx-auto">
@@ -192,8 +182,8 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </div>
       </section>
 
-      {/* Bottom Form */}
-      <section className="py-16 px-4" style={{ backgroundColor: "#F4F6F9" }}>
+      {/* Quote Form */}
+      <section id="location-form" className="py-16 px-4 scroll-mt-16" style={{ backgroundColor: "#F4F6F9" }}>
         <div className="max-w-2xl mx-auto">
           <SectionHeader
             title={`Book Your ${location.name} Detail Today`}

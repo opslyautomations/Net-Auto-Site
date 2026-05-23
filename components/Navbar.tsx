@@ -82,12 +82,14 @@ export default function Navbar() {
                 Services <span aria-hidden="true">▾</span>
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 rounded-xl overflow-hidden shadow-2xl py-1 z-50" style={{ backgroundColor: "#0A1F3D", border: "1px solid rgba(177,209,231,0.2)" }}>
-                  {services.map((s) => (
-                    <Link key={s.href} href={s.href} className="block px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10 transition-colors">
-                      {s.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 pt-2 w-56 z-50">
+                  <div className="rounded-xl overflow-hidden shadow-2xl py-1" style={{ backgroundColor: "#0A1F3D", border: "1px solid rgba(177,209,231,0.2)" }}>
+                    {services.map((s) => (
+                      <Link key={s.href} href={s.href} className="block px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10 transition-colors">
+                        {s.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -98,16 +100,18 @@ export default function Navbar() {
                 Service Areas <span aria-hidden="true">▾</span>
               </button>
               {areasOpen && (
-                <div className="absolute top-full left-0 mt-2 rounded-xl overflow-hidden shadow-2xl py-2 z-50 w-80" style={{ backgroundColor: "#0A1F3D", border: "1px solid rgba(177,209,231,0.2)" }}>
-                  <Link href="/service-areas" className="block px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors border-b border-white/10 mb-1">
-                    All Service Areas
-                  </Link>
-                  <div className="grid grid-cols-2">
-                    {areas.map((a) => (
-                      <Link key={a.href} href={a.href} className="block px-4 py-1.5 text-sm text-white/80 hover:text-white hover:bg-white/10 transition-colors">
-                        {a.name}
-                      </Link>
-                    ))}
+                <div className="absolute top-full left-0 pt-2 w-80 z-50">
+                  <div className="rounded-xl overflow-hidden shadow-2xl py-2" style={{ backgroundColor: "#0A1F3D", border: "1px solid rgba(177,209,231,0.2)" }}>
+                    <Link href="/service-areas" className="block px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors border-b border-white/10 mb-1">
+                      All Service Areas
+                    </Link>
+                    <div className="grid grid-cols-2">
+                      {areas.map((a) => (
+                        <Link key={a.href} href={a.href} className="block px-4 py-1.5 text-sm text-white/80 hover:text-white hover:bg-white/10 transition-colors">
+                          {a.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
