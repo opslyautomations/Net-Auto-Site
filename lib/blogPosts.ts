@@ -1388,6 +1388,229 @@ For vehicles near salt air: same 3–4 week schedule — salt accelerates the ir
     `,
   },
   {
+    slug: "how-much-does-car-detailing-cost-oahu",
+    title: "How Much Does Car Detailing Cost in Oahu?",
+    metaTitle: "Car Detailing Cost in Oahu | Net Automotive",
+    metaDescription: "What does car detailing cost on Oahu in 2026? A clear, honest breakdown of pricing factors, service tiers, and what affects the final quote.",
+    excerpt: "A clear, honest breakdown of what moves detailing prices up or down on Oahu — so you can request a quote with confidence and know what you're paying for.",
+    category: "Service",
+    targetKeyword: "car detailing cost oahu",
+    datePublished: "2026-05-22",
+    dateModified: "2026-05-22",
+    ogImage: "/og/blog-detailing-cost-oahu.png",
+    content: `
+## The Three Things That Determine Your Price
+
+Pricing for car detailing on Oahu can feel confusing. One shop quotes you $80, another quotes $400, and the service names sound identical. The truth is that detailing isn't a single product — it's a category of services, and the cost depends entirely on what your vehicle actually needs.
+
+Every honest detailer prices based on the same three variables. If a shop won't explain how they arrive at a number, that's a red flag.
+
+### 1. Vehicle Size and Type
+
+A two-door coupe is not the same job as a full-size truck or a third-row SUV. More square footage means more surface area to wash, more carpet to extract, more leather to condition, and more time on site. Most Oahu detailers price in tiers — small, medium, large, and extra-large — and the spread between the smallest and largest vehicle can be significant.
+
+### 2. Vehicle Condition
+
+A daily-driver sedan that gets washed monthly is a very different job from a truck that's been sitting in the salt air with sand baked into the carpets for two years. Heavy contamination, pet hair, stains, mold, and neglected interiors require more labor, stronger products, and additional steps like hot-water extraction or [clay bar treatment](/services/clay-bar-treatment).
+
+If your car hasn't been professionally detailed in more than 12 months, expect a higher quote. That's not gouging — it's the reality of the work involved.
+
+### 3. Services Selected
+
+A basic exterior wash and a full interior-plus-exterior detail with carpet shampoo, leather conditioning, headlight restoration, and clay bar treatment are not in the same price bracket. The more services you stack, the higher the total — but bundled packages almost always cost less than booking the same services individually.
+
+## Typical Oahu Pricing Ranges
+
+To give you a realistic sense of the market:
+
+- **Basic exterior or basic interior:** starts on the lower end and is best for well-maintained vehicles needing routine upkeep.
+- **Full interior detail:** mid-range, includes vacuum, steam, surface cleaning, and conditioning.
+- **Full interior plus exterior:** the most common request, and where most Oahu detailing quotes land.
+- **Restoration-level work:** highest tier — includes paint correction, deep extraction, [headlight restoration](/services/headlight-restoration), and full reconditioning for cars in rough shape.
+
+We intentionally don't publish flat-rate prices, because quoting your specific vehicle accurately requires knowing the year, make, model, condition, and which services you actually need. A flat-rate site quote is almost always either inflated to cover the worst case or set low to bait you in.
+
+## Why Mobile Detailing Pricing Is Often Better Value
+
+A mobile detailer like Net Automotive Detailing doesn't carry the overhead of a brick-and-mortar shop — no lease, no waiting room, no fixed-cost facility. That efficiency gets reflected in fair pricing, while you also save the hidden cost of driving to a shop, waiting hours, and arranging a ride home.
+
+We come to your driveway, your office parking lot, or your worksite, anywhere on Oahu — from Honolulu to Kapolei to Kailua to Hawaii Kai.
+
+## What Makes Hawaii Different
+
+Detailing in Oahu is not the same job as detailing on the mainland. Salt air, sand, intense UV exposure, and tropical humidity all shorten the lifespan of paint, leather, and trim. Products and techniques calibrated for these conditions cost more — but they protect your vehicle far longer than generic detailing supplies.
+
+When comparing quotes, ask the detailer specifically what products and protection they use for island conditions. A real Oahu detailer will have an immediate answer.
+
+## How to Get an Accurate Quote
+
+The fastest way to know exactly what your detail will cost is to request a free quote. Tell us your vehicle's year, make, model, condition, and the services you're considering, and we'll give you an honest, itemized estimate — usually within the same business day.
+
+[Get Your Free Quote →](/contact#quote-form)
+
+Or call us directly at (808) 777-8964. We serve all of Oahu, by appointment, seven days a week.
+    `,
+  },
+  {
+    slug: "whats-included-basic-car-detail",
+    title: "What's Included in a Basic Car Detail?",
+    metaTitle: "What's in a Basic Car Detail? | Net Automotive",
+    metaDescription: "A clear breakdown of exactly what's included in a basic car detail — interior, exterior, and the steps that separate detailing from a car wash.",
+    excerpt: "A clear breakdown of what a real basic car detail includes, what it doesn't, and how to tell whether a quote is the real deal.",
+    category: "Service",
+    targetKeyword: "what's included in a basic car detail",
+    datePublished: "2026-05-22",
+    dateModified: "2026-05-22",
+    ogImage: "/og/blog-basic-car-detail.png",
+    content: `
+## The Definition of "Basic Detail"
+
+"Basic detail" sounds like it should mean the same thing everywhere — but in practice, it varies wildly from shop to shop. Some operators sell a glorified car wash and call it detailing. Others bundle in interior vacuum, surface wipe-down, and exterior wax and call that the same thing.
+
+A basic detail is a complete maintenance clean — interior and exterior — for a vehicle that's already in reasonably good condition. It is not a deep restoration. It is not paint correction. It is the level of service that keeps a well-maintained car looking new.
+
+If your vehicle has heavy stains, embedded sand, pet hair throughout, oxidized paint, or cloudy headlights, you'll need a step above basic. We'll tell you that up front when you request a quote, rather than locking you into a service that won't fix the actual problem.
+
+## What a Basic Exterior Detail Includes
+
+A proper basic exterior detail involves more than a soapy sponge and a rinse. At minimum, you should expect:
+
+- **Pre-rinse and foam wash** to lift loose dirt without scratching the paint
+- **Hand wash** with the two-bucket method, using clean mitts that don't drag grit across the clearcoat
+- **Wheel and tire cleaning** with dedicated products that break down brake dust
+- **Hand dry** with proper microfiber towels — not chamois, not air-dry
+- **Tire dressing** for a clean, finished look
+- **Glass cleaning** on all exterior windows
+
+This is the foundation. Anything called "exterior detailing" that skips the hand wash and goes straight to a spray-down isn't detailing.
+
+## What a Basic Interior Detail Includes
+
+The interior side of a basic detail should always include:
+
+- **Thorough vacuum** of carpets, mats, seats, and trunk
+- **Compressed air or detailing brushes** for vents, seams, and tight crevices
+- **Surface wipe-down** of dashboard, console, door panels, and steering wheel
+- **Glass cleaning** on all interior windows
+- **Mat cleaning** — shaken out, vacuumed, and wiped
+- **Light odor neutralization** as part of the process, not an upsell
+
+Notice what's not on this list: hot-water extraction of carpets, seat shampooing, [leather conditioning](/services/leather-conditioning), and stain treatment. Those are separate services. If your seats are stained or your carpets smell, you need a step above basic — and a good detailer will recommend exactly which add-ons solve your problem.
+
+## What Separates Detailing from a Car Wash
+
+A car wash cleans the surface. A detail addresses the surface, the substrate underneath, and the long-term protection of both.
+
+Three things distinguish real detailing:
+
+1. **Time on the vehicle.** A basic detail typically takes one to three hours. A drive-through wash takes five minutes. That time difference is the entire point.
+2. **Product quality and process.** Professional-grade soaps, microfiber, and brushes designed not to scratch — not bargain-shelf chemistry.
+3. **Attention to detail in places nobody else looks.** Door jambs, gas cap, trunk seal, vent louvers, the area under the seats. A car wash hits the outside. A detail hits everywhere.
+
+## Add-Ons That Make Sense for Oahu Drivers
+
+Most Oahu drivers benefit from adding at least one of these to a basic detail:
+
+- **[Clay bar treatment](/services/clay-bar-treatment)** to remove embedded contamination from salt air and tree sap
+- **[Leather conditioning](/services/leather-conditioning)** to protect seats from UV and humidity damage
+- **[Headlight restoration](/services/headlight-restoration)** to reverse the cloudy yellowing that island sun causes faster than mainland conditions
+- **[Plastic color restoration](/services/plastic-color-restoration)** to bring faded black trim back to factory
+
+These aren't upsells — they're the services that address the specific damage Hawaii's environment causes.
+
+## When Basic Isn't Enough
+
+Be honest about your car's condition. If you can't remember the last detail, if there are stains you can see, if the carpet feels sandy, or if the headlights look cloudy, basic won't get you where you want to be. A real detailer will recommend the right tier for your actual vehicle — not just upsell whatever earns more.
+
+## Get a Free Quote
+
+Not sure what tier you need? Tell us about your vehicle and what's bothering you, and we'll recommend the right service honestly — even if it's the simplest one.
+
+[Get Your Free Quote →](/contact#quote-form)
+
+Or call (808) 777-8964. Mobile service across all of Oahu, seven days a week by appointment.
+    `,
+  },
+  {
+    slug: "interior-vs-exterior-car-detailing",
+    title: "Interior vs. Exterior Car Detailing: Which Do I Need?",
+    metaTitle: "Interior vs. Exterior Detailing | Net Automotive",
+    metaDescription: "Interior or exterior detail — which one does your car actually need? A clear guide to choosing the right service for your vehicle's condition.",
+    excerpt: "A clear framework for deciding whether your car needs an interior detail, an exterior detail, or both — with Hawaii-specific guidance on what wears fastest.",
+    category: "Service",
+    targetKeyword: "interior vs exterior car detailing",
+    datePublished: "2026-05-22",
+    dateModified: "2026-05-22",
+    ogImage: "/og/blog-interior-vs-exterior.png",
+    content: `
+## The Short Answer
+
+When you're booking a detail, the first question almost everyone asks is the same: do I need the interior done, the exterior done, or both?
+
+If your car looks dirty on the outside but feels clean inside, you need an [exterior detail](/services/exterior-detail). If the cabin is grimy but the paint still shines, you need an [interior detail](/services/interior-detail). If you can't remember the last time either was done properly, you need both — and you'll save money bundling them.
+
+That's the simple version. The nuanced version is below.
+
+## When You Need an Exterior Detail
+
+An [exterior detail](/services/exterior-detail) is the right call when the visible problem is on the outside of the vehicle. Common signs:
+
+- Paint looks dull, hazy, or has lost its shine
+- Visible water spots, especially after rain
+- Bird droppings, tree sap, or bug splatter that won't come off with a regular wash
+- Faded black trim around windows, mirrors, or bumpers
+- Cloudy or yellowed headlights
+- Wheels coated in brake dust
+- A general "it just needs to be cleaned outside" feeling
+
+Exterior detailing covers the paint, glass, wheels, tires, and trim. For Oahu drivers, this is the side of detailing that takes the most environmental abuse — salt air corrodes, UV fades, and sand scratches. Most island vehicles benefit from exterior detailing more frequently than mainland vehicles.
+
+## When You Need an Interior Detail
+
+An [interior detail](/services/interior-detail) is the right call when the cabin is what's bothering you. Common signs:
+
+- Sand in the carpets, seats, or crevices (the universal Oahu problem)
+- Stains on seats or floor mats
+- Sticky surfaces on the dashboard or console
+- Lingering odors — pet, food, mildew, smoke
+- Cloudy interior windows
+- Visible dust on every surface
+- Dirty seatbelts or worn-looking leather
+
+Interior detailing covers carpets, seats, dashboard, console, headliner, door panels, and glass. It's the service that has the biggest impact on day-to-day driving experience, because you actually sit in the result.
+
+## When You Need Both
+
+Most Oahu drivers, honestly, need both — and not because we're trying to sell you more service. The reason is that interior and exterior wear happen in parallel. If you haven't had a real detail in six months, both sides of your vehicle are due. Bundling the two also costs less than booking them separately and locks in a more efficient single appointment.
+
+If any of these apply, just do both:
+
+- It's been more than 6–12 months since your last professional detail
+- You're getting your car ready to sell or trade in
+- The vehicle has been through a heavy season — beach trips, road work, pet transport, kids
+- You just bought a used car and want to start clean
+- You're a new owner who wants the car set up properly from day one
+
+## How Hawaii's Environment Changes the Math
+
+This is where mainland advice falls short. Oahu's climate creates a specific pattern:
+
+- **Exterior wear is accelerated.** Salt air and intense UV fade and damage paint faster than mainland conditions. Many Oahu drivers benefit from exterior detailing every 2–3 months and interior every 4–6 months.
+- **Sand is the dominant interior problem.** It works its way into every seat track, vent, and carpet fiber. Vacuum alone doesn't fully remove it — proper extraction does.
+- **Humidity affects leather and electronics.** [Leather conditioning](/services/leather-conditioning) is far more important here than on the mainland because untreated leather cracks faster in tropical conditions.
+
+A detailer who knows island conditions will plan your service intervals differently than a mainland operator would.
+
+## Still Not Sure? Ask Us
+
+The best way to decide is to tell us what's actually wrong with your vehicle and let us recommend the right service. We'd rather quote you an interior-only detail that solves your problem than upsell you on a full package you don't need.
+
+[Get Your Free Quote →](/contact#quote-form)
+
+Or call (808) 777-8964. Mobile service across all of Oahu — Honolulu, Kailua, Kapolei, Kaneohe, and every city in between.
+    `,
+  },
+  {
     slug: "mobile-detailing-ewa-beach",
     title: "Mobile Auto Detailing in Ewa Beach: Salt, Sand, and Sun Protection",
     metaTitle: "Mobile Detailing Ewa Beach | Salt & Sun Protection",
