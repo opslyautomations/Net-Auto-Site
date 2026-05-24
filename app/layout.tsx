@@ -43,10 +43,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://api.opslyautomations.com" />
-        <link rel="preconnect" href="https://widgets.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://widgets.leadconnectorhq.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
@@ -69,12 +67,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           strategy="lazyOnload"
         />
 
-        {/* GHL Chat Widget */}
+        {/* GHL Chat Widget — lazyOnload defers until page is idle */}
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
           data-widget-id="69a639dba27e8c57320e7fb7"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
       </body>
     </html>

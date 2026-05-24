@@ -26,6 +26,7 @@ export default function GHLForm() {
         data-form-id="ABvoqJpqtmxcoFgbknFG"
         title="Automotive Detailing Request Form"
         aria-label="Automotive Detailing Request Form"
+        loading="lazy"
       />
     </div>
   );
