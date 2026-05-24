@@ -12,6 +12,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   display: "swap",
+  adjustFontFallback: true,
 });
 
 const inter = Inter({
@@ -19,6 +20,7 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
