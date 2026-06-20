@@ -5,6 +5,7 @@ import CTABand from "@/components/CTABand";
 import SectionHeader from "@/components/SectionHeader";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GHLForm from "@/components/GHLForm";
+import { Reveal } from "@/components/Reveal";
 import { services } from "@/lib/services";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
@@ -72,14 +73,15 @@ export default function ServicesPage() {
             subtitle="Every service is mobile — we come to you anywhere on Oahu."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service) => (
-              <ServiceCard
-                key={service.slug}
-                slug={service.slug}
-                name={service.name}
-                description={service.tagline}
-                icon={serviceIcons[service.slug] || "✨"}
-              />
+            {services.map((service, i) => (
+              <Reveal key={service.slug} as="div" variant="up" delay={Math.min(i, 4) * 80} className="flex flex-col">
+                <ServiceCard
+                  slug={service.slug}
+                  name={service.name}
+                  description={service.tagline}
+                  icon={serviceIcons[service.slug] || "✨"}
+                />
+              </Reveal>
             ))}
           </div>
         </div>

@@ -30,7 +30,7 @@ export default function ServiceCard({
 
   return (
     <div
-      className="rounded-2xl border p-6 flex flex-col gap-4 transition-all hover:shadow-lg hover:-translate-y-1"
+      className="rounded-2xl border p-6 flex flex-col gap-4 card-lift card-glow h-full"
       style={{
         borderColor: "#B1D1E7",
         backgroundColor: "#ffffff",

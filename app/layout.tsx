@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import "@/styles/motion.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SITE_NAME, SITE_URL, OG_DEFAULT_IMAGE, TAGLINE } from "@/lib/constants";

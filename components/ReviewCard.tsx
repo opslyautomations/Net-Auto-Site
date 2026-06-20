@@ -15,7 +15,7 @@ export default function ReviewCard({
 }: ReviewCardProps) {
   return (
     <div
-      className="rounded-2xl p-6 flex flex-col gap-4"
+      className="rounded-2xl p-6 flex flex-col gap-4 card-lift h-full"
       style={{
         backgroundColor: "#ffffff",
         boxShadow: "0 2px 16px rgba(10,31,61,0.08)",

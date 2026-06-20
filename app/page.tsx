@@ -8,6 +8,7 @@ import CTABand from "@/components/CTABand";
 import ReviewCard from "@/components/ReviewCard";
 import ServiceCard from "@/components/ServiceCard";
 import SectionHeader from "@/components/SectionHeader";
+import { Reveal } from "@/components/Reveal";
 import { SITE_NAME, SITE_URL, PHONE, PHONE_RAW } from "@/lib/constants";
 import { localBusinessSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -173,14 +174,18 @@ export default function HomePage() {
       {/* Services Grid */}
       <section className="py-20 px-4" style={{ backgroundColor: "#F4F6F9" }}>
         <div className="max-w-7xl mx-auto">
-          <SectionHeader
-            label="What We Offer"
-            title="Our Mobile Detailing Services"
-            subtitle="Interior, exterior, and restoration services delivered to your door — anywhere on Oahu."
-          />
+          <Reveal as="div" variant="up">
+            <SectionHeader
+              label="What We Offer"
+              title="Our Mobile Detailing Services"
+              subtitle="Interior, exterior, and restoration services delivered to your door — anywhere on Oahu."
+            />
+          </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-8">
-            {serviceCards.map((s) => (
-              <ServiceCard key={s.slug} {...s} />
+            {serviceCards.map((s, i) => (
+              <Reveal key={s.slug} as="div" variant="up" delay={Math.min(i, 4) * 80} className="flex flex-col">
+                <ServiceCard {...s} />
+              </Reveal>
             ))}
           </div>
           <div className="text-center">
@@ -200,7 +205,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image placeholder */}
-            <div className="rounded-2xl overflow-hidden aspect-video flex items-center justify-center" style={{ backgroundColor: "#F4F6F9", border: "2px dashed #B1D1E7" }}>
+            <div className="rounded-2xl overflow-hidden aspect-video flex items-center justify-center scroll-scale" style={{ backgroundColor: "#F4F6F9", border: "2px dashed #B1D1E7" }}>
               <div className="text-center p-8">
                 <div className="text-6xl mb-4" aria-hidden="true">🚗</div>
                 <p className="font-medium" style={{ color: "#6B7A90" }}>Before & After Detail</p>
@@ -210,11 +215,13 @@ export default function HomePage() {
 
             {/* Content */}
             <div>
-              <SectionHeader
-                label="Why Net Automotive"
-                title="Why Oahu Drivers Choose Net Automotive Detailing"
-                centered={false}
-              />
+              <Reveal as="div" variant="up">
+                <SectionHeader
+                  label="Why Net Automotive"
+                  title="Why Oahu Drivers Choose Net Automotive Detailing"
+                  centered={false}
+                />
+              </Reveal>
               <ul className="flex flex-col gap-5">
                 {[
                   {
@@ -233,14 +240,14 @@ export default function HomePage() {
                     title: "Professional results — interior steam, hand wash, showroom finishes.",
                     desc: "Every detail is done with professional-grade equipment and products, and we don't cut corners on any step of the process.",
                   },
-                ].map((item) => (
-                  <li key={item.title} className="flex gap-4">
+                ].map((item, i) => (
+                  <Reveal key={item.title} as="li" variant="left" delay={i * 80} className="flex gap-4">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold mt-0.5" style={{ backgroundColor: "rgba(240,140,42,0.15)", color: "#F08C2A" }} aria-hidden="true">✓</span>
                     <div>
                       <strong className="font-semibold block mb-1" style={{ color: "#0A1F3D" }}>{item.title}</strong>
                       <p className="text-sm leading-relaxed" style={{ color: "#6B7A90" }}>{item.desc}</p>
                     </div>
-                  </li>
+                  </Reveal>
                 ))}
               </ul>
             </div>
@@ -251,11 +258,13 @@ export default function HomePage() {
       {/* Service Areas */}
       <section className="py-20 px-4" style={{ backgroundColor: "#F4F6F9" }}>
         <div className="max-w-7xl mx-auto">
-          <SectionHeader
-            label="Serving All of Oahu"
-            title="Proudly Serving All of Oahu, Hawaii"
-            subtitle="Mobile detailing wherever you park — from Kapolei to Kaneohe, Haleiwa to Hawaii Kai."
-          />
+          <Reveal as="div" variant="up">
+            <SectionHeader
+              label="Serving All of Oahu"
+              title="Proudly Serving All of Oahu, Hawaii"
+              subtitle="Mobile detailing wherever you park — from Kapolei to Kaneohe, Haleiwa to Hawaii Kai."
+            />
+          </Reveal>
           <div className="flex flex-wrap gap-3 justify-center">
             {locations.map((loc) => (
               <Link
@@ -287,17 +296,19 @@ export default function HomePage() {
       {/* Gallery Preview */}
       <section className="py-20 px-4" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-7xl mx-auto">
-          <SectionHeader
-            label="Our Work"
-            title="Before & After"
-            subtitle="Real results from Net Automotive Detailing jobs across Oahu."
-          />
+          <Reveal as="div" variant="up">
+            <SectionHeader
+              label="Our Work"
+              title="Before & After"
+              subtitle="Real results from Net Automotive Detailing jobs across Oahu."
+            />
+          </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
             {homepageGalleryImages.map((img) => (
               <Link
                 key={img.src}
                 href="/gallery"
-                className="group relative aspect-video rounded-xl overflow-hidden block"
+                className="group relative aspect-video rounded-xl overflow-hidden block scroll-scale"
                 style={{ border: "1px solid #B1D1E7" }}
                 aria-label={img.title}
               >
@@ -331,14 +342,18 @@ export default function HomePage() {
       {/* Reviews Preview */}
       <section className="py-20 px-4" style={{ backgroundColor: "#F4F6F9" }}>
         <div className="max-w-7xl mx-auto">
-          <SectionHeader
-            label="What Clients Say"
-            title="60+ Five-Star Reviews on Google"
-            subtitle="Real reviews from happy Oahu drivers — verified on our Google Business Profile."
-          />
+          <Reveal as="div" variant="up">
+            <SectionHeader
+              label="What Clients Say"
+              title="60+ Five-Star Reviews on Google"
+              subtitle="Real reviews from happy Oahu drivers — verified on our Google Business Profile."
+            />
+          </Reveal>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {reviews.map((review) => (
-              <ReviewCard key={review.reviewerName} {...review} />
+            {reviews.map((review, i) => (
+              <Reveal key={review.reviewerName} as="div" variant="up" delay={i * 80} className="flex flex-col">
+                <ReviewCard {...review} />
+              </Reveal>
             ))}
           </div>
           <div className="text-center">

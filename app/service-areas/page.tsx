@@ -4,6 +4,7 @@ import CTABand from "@/components/CTABand";
 import SectionHeader from "@/components/SectionHeader";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GHLForm from "@/components/GHLForm";
+import { Reveal } from "@/components/Reveal";
 import { locations } from "@/lib/locations";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
@@ -64,17 +65,18 @@ export default function ServiceAreasPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {locations.map((loc) => (
-              <Link
-                key={loc.slug}
-                href={`/service-areas/${loc.slug}`}
-                className="block p-5 rounded-2xl border transition-all hover:shadow-lg hover:-translate-y-1"
-                style={{ backgroundColor: "#ffffff", borderColor: "#B1D1E7" }}
-              >
-                <h2 className="font-bold text-lg mb-1" style={{ color: "#0A1F3D" }}>{loc.name}</h2>
-                <p className="text-sm" style={{ color: "#6B7A90" }}>Oahu, Hawaii</p>
-                <p className="text-xs mt-2 font-medium" style={{ color: "#F08C2A" }}>View details →</p>
-              </Link>
+            {locations.map((loc, i) => (
+              <Reveal key={loc.slug} as="div" variant="up" delay={Math.min(i, 4) * 80}>
+                <Link
+                  href={`/service-areas/${loc.slug}`}
+                  className="block p-5 rounded-2xl border card-lift transition-all"
+                  style={{ backgroundColor: "#ffffff", borderColor: "#B1D1E7" }}
+                >
+                  <h2 className="font-bold text-lg mb-1" style={{ color: "#0A1F3D" }}>{loc.name}</h2>
+                  <p className="text-sm" style={{ color: "#6B7A90" }}>Oahu, Hawaii</p>
+                  <p className="text-xs mt-2 font-medium" style={{ color: "#F08C2A" }}>View details →</p>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -93,12 +95,14 @@ export default function ServiceAreasPage() {
               { region: "Windward Side", cities: "Kailua, Kaneohe, Waimanalo Beach", icon: "🌊" },
               { region: "West Side", cities: "Kapolei, Ewa Beach, Royal Kunia", icon: "☀️" },
               { region: "North Shore", cities: "Haleiwa, Waialua, Wahiawa", icon: "🏄" },
-            ].map((r) => (
-              <div key={r.region} className="text-center p-5 rounded-2xl" style={{ backgroundColor: "#F4F6F9" }}>
-                <div className="text-3xl mb-2" aria-hidden="true">{r.icon}</div>
-                <h3 className="font-bold mb-1" style={{ color: "#0A1F3D" }}>{r.region}</h3>
-                <p className="text-sm" style={{ color: "#6B7A90" }}>{r.cities}</p>
-              </div>
+            ].map((r, i) => (
+              <Reveal key={r.region} as="div" variant="up" delay={i * 80}>
+                <div className="text-center p-5 rounded-2xl h-full" style={{ backgroundColor: "#F4F6F9" }}>
+                  <div className="text-3xl mb-2" aria-hidden="true">{r.icon}</div>
+                  <h3 className="font-bold mb-1" style={{ color: "#0A1F3D" }}>{r.region}</h3>
+                  <p className="text-sm" style={{ color: "#6B7A90" }}>{r.cities}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
