@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import GHLForm from "@/components/GHLForm";
 import CTABand from "@/components/CTABand";
 import SectionHeader from "@/components/SectionHeader";
@@ -44,13 +45,16 @@ export default function AboutPage() {
       <section className="py-16 px-4" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Photo placeholder */}
-            <div className="rounded-2xl overflow-hidden aspect-square flex items-center justify-center order-2 lg:order-1 lg:sticky lg:top-24" style={{ backgroundColor: "#F4F6F9", border: "2px dashed #B1D1E7" }}>
-              <div className="text-center p-8">
-                <div className="text-6xl mb-4" aria-hidden="true">👨‍💼</div>
-                <p className="font-medium" style={{ color: "#6B7A90" }}>Elijah Churchwell</p>
-                <p className="text-sm" style={{ color: "#6B7A90" }}>Photo coming soon</p>
-              </div>
+            {/* Owner photo */}
+            <div className="rounded-2xl overflow-hidden aspect-square relative order-2 lg:order-1 lg:sticky lg:top-24">
+              <Image
+                src="/images/ChatGPT Image Jun 20, 2026, 12_20_01 AM.png"
+                alt="Elijah Churchwell, owner of Net Automotive Detailing"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
             </div>
 
             <div className="order-1 lg:order-2">
