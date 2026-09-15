@@ -41,7 +41,6 @@ export const metadata: Metadata = {
     // og:image comes from app/opengraph-image.tsx and each route's own card.
   },
   twitter: { card: "summary_large_image" },
-  icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
