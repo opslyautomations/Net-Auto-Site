@@ -12,7 +12,6 @@ export const metadata: Metadata = buildMetadata({
   title: "About Net Automotive Detailing | Oahu's Mobile",
   description: "Learn about Net Automotive Detailing — Oahu's trusted mobile auto detailing specialists. Professional, mobile, and Hawaii-experienced. Meet the team.",
   slug: "about",
-  image: `${SITE_URL}/og/about.png`,
 });
 
 const breadcrumbs = [

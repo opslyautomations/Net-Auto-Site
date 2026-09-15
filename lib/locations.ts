@@ -14,7 +14,6 @@ export interface Location {
   whyChoose: string[];
   nearbyAreas: string[];
   faqs: LocationFAQ[];
-  ogImage: string;
 }
 
 export const locations: Location[] = [
@@ -47,7 +46,6 @@ export const locations: Location[] = [
         answer: "Absolutely. Many of our Honolulu clients book appointments during work hours and return to a fully detailed vehicle. As long as there's reasonable parking access, we can come to your workplace.",
       },
     ],
-    ogImage: "/og/location-honolulu.png",
   },
   {
     slug: "kailua",
@@ -78,7 +76,6 @@ export const locations: Location[] = [
         answer: "Yes — we service all of the windward coast including Lanikai, Kailua town, and the areas toward Waimanalo. Just mention your location when you request your quote.",
       },
     ],
-    ogImage: "/og/location-kailua.png",
   },
   {
     slug: "kapolei",
@@ -109,7 +106,6 @@ export const locations: Location[] = [
         answer: "Family-sized vehicles typically take 3–5 hours for a full interior and exterior detail. We'll provide an accurate time estimate based on your vehicle and its condition when you request your quote.",
       },
     ],
-    ogImage: "/og/location-kapolei.png",
   },
   {
     slug: "kaneohe",
@@ -140,7 +136,6 @@ export const locations: Location[] = [
         answer: "Frequent rain means water spots and paint mineral deposits accumulate quickly. We recommend a full exterior detail every 4–6 weeks and an interior check every 6–8 weeks to stay ahead of moisture-related issues.",
       },
     ],
-    ogImage: "/og/location-kaneohe.png",
   },
   {
     slug: "pearl-city",
@@ -171,7 +166,6 @@ export const locations: Location[] = [
         answer: "Yes — we service all Pearl City neighborhoods including Manana, Pacific Palisades, and surrounding areas. Just provide your address when you request your quote.",
       },
     ],
-    ogImage: "/og/location-pearl-city.png",
   },
   {
     slug: "aiea",
@@ -202,7 +196,6 @@ export const locations: Location[] = [
         answer: "Simply fill out our quote request form on this page. We'll follow up to confirm your vehicle, preferred location in Aiea, and the services you need. Scheduling is fast and convenient.",
       },
     ],
-    ogImage: "/og/location-aiea.png",
   },
   {
     slug: "ewa-beach",
@@ -233,7 +226,6 @@ export const locations: Location[] = [
         answer: "Yes — we can detail multiple vehicles in one visit. Just let us know how many vehicles and what services you need when you request your quote and we'll plan the time accordingly.",
       },
     ],
-    ogImage: "/og/location-ewa-beach.png",
   },
   {
     slug: "mililani",
@@ -264,7 +256,6 @@ export const locations: Location[] = [
         answer: "We offer early morning appointments to fit Mililani commuters' schedules. Hours and availability are by appointment — mention your preferred time when you request your quote and we'll do our best to accommodate.",
       },
     ],
-    ogImage: "/og/location-mililani.png",
   },
   {
     slug: "hawaii-kai",
@@ -295,7 +286,6 @@ export const locations: Location[] = [
         answer: "Yes to both. We can work in marina parking areas (where space permits) and at residential driveways throughout Hawaii Kai. Specify your preferred location when you request your quote.",
       },
     ],
-    ogImage: "/og/location-hawaii-kai.png",
   },
   {
     slug: "haleiwa",
@@ -326,7 +316,6 @@ export const locations: Location[] = [
         answer: "Yes — we service the North Shore including Haleiwa, Pupukea, and surrounding areas. We recommend booking in advance as North Shore appointments fill up, especially on weekends.",
       },
     ],
-    ogImage: "/og/location-haleiwa.png",
   },
   {
     slug: "wahiawa",
@@ -357,7 +346,6 @@ export const locations: Location[] = [
         answer: "Contact us when requesting your quote and mention your military status. We work with military families regularly and appreciate their service to our community.",
       },
     ],
-    ogImage: "/og/location-wahiawa.png",
   },
   {
     slug: "waialua",
@@ -388,7 +376,6 @@ export const locations: Location[] = [
         answer: "Yes — we cover all of the Waialua district including Mokuleia and properties out toward Dillingham Airfield. Mention your specific location when booking.",
       },
     ],
-    ogImage: "/og/location-waialua.png",
   },
   {
     slug: "waimalu",
@@ -419,7 +406,6 @@ export const locations: Location[] = [
         answer: "Just make sure we have clear access to your vehicle and, ideally, a water hookup nearby. Remove any personal items you want protected from the interior. We handle the rest.",
       },
     ],
-    ogImage: "/og/location-waimalu.png",
   },
   {
     slug: "manoa",
@@ -450,7 +436,6 @@ export const locations: Location[] = [
         answer: "Yes. Musty odors from humidity and moisture are one of our most common Manoa requests. Our interior service includes enzyme-based odor elimination that addresses the mildew source, not just the surface smell.",
       },
     ],
-    ogImage: "/og/location-manoa.png",
   },
   {
     slug: "waimanalo-beach",
@@ -481,7 +466,6 @@ export const locations: Location[] = [
         answer: "Yes — as long as we have vehicle access and ideally a water source on the property. We're experienced working at properties near the beach and understand the setup requirements.",
       },
     ],
-    ogImage: "/og/location-waimanalo-beach.png",
   },
   {
     slug: "kaimuki",
@@ -512,7 +496,6 @@ export const locations: Location[] = [
         answer: "About the same as anywhere else — 2–4 hours for interior, 1–2 for exterior. We work efficiently and will keep you updated on timing. Just make sure your parking spot is available for the duration.",
       },
     ],
-    ogImage: "/og/location-kaimuki.png",
   },
   {
     slug: "royal-kunia",
@@ -543,7 +526,6 @@ export const locations: Location[] = [
         answer: "Royal Kunia's elevated, west-facing position means strong afternoon sun. We prefer to detail in morning hours or shaded areas to produce the best results. We'll recommend the optimal approach when we schedule your appointment.",
       },
     ],
-    ogImage: "/og/location-royal-kunia.png",
   },
   {
     slug: "ewa-villages",
@@ -574,7 +556,6 @@ export const locations: Location[] = [
         answer: "Simply fill out the quote request form on this page. We'll contact you to confirm services, timing, and your specific address in Ewa Villages. The process is quick and straightforward.",
       },
     ],
-    ogImage: "/og/location-ewa-villages.png",
   },
   {
     slug: "schofield-barracks",
@@ -605,7 +586,6 @@ export const locations: Location[] = [
         answer: "We do our best to accommodate urgent military timelines. Contact us directly at (808) 777-8964 for time-sensitive appointments and we'll do everything we can to fit your schedule.",
       },
     ],
-    ogImage: "/og/location-schofield-barracks.png",
   },
 ];
 

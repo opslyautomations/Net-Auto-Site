@@ -15,7 +15,6 @@ export const metadata: Metadata = buildMetadata({
   title: "Gallery — Before & After Detailing Oahu | Net Auto",
   description: "Real before and after photos of Net Automotive Detailing jobs across Oahu, Hawaii. Toyota, BMW, Mercedes, Tesla, Jeep and more — see our results.",
   slug: "gallery",
-  image: `${SITE_URL}/og/gallery.png`,
 });
 
 const breadcrumbs = [

@@ -15,7 +15,6 @@ export interface Service {
   benefits: { icon: string; title: string; description: string }[];
   faqs: ServiceFAQ[];
   relatedSlugs: string[];
-  ogImage: string;
 }
 
 export const services: Service[] = [
@@ -57,7 +56,6 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["carpet-shampoo", "seat-shampoo", "leather-conditioning"],
-    ogImage: "/og/interior-detail.png",
   },
   {
     slug: "exterior-detail",
@@ -98,7 +96,6 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["clay-bar-treatment", "exterior-spray-wax", "rim-detailing"],
-    ogImage: "/og/exterior-detail.png",
   },
   {
     slug: "carpet-shampoo",
@@ -137,7 +134,6 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["interior-detail", "seat-shampoo", "leather-conditioning"],
-    ogImage: "/og/carpet-shampoo.png",
   },
   {
     slug: "seat-shampoo",
@@ -175,7 +171,6 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["interior-detail", "carpet-shampoo", "leather-conditioning"],
-    ogImage: "/og/seat-shampoo.png",
   },
   {
     slug: "leather-conditioning",
@@ -213,7 +208,6 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["interior-detail", "seat-shampoo", "carpet-shampoo"],
-    ogImage: "/og/leather-conditioning.png",
   },
   {
     slug: "clay-bar-treatment",
@@ -251,7 +245,6 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["exterior-detail", "exterior-spray-wax", "rim-detailing"],
-    ogImage: "/og/clay-bar-treatment.png",
   },
   {
     slug: "exterior-spray-wax",
@@ -289,7 +282,6 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["exterior-detail", "clay-bar-treatment", "rim-detailing"],
-    ogImage: "/og/exterior-spray-wax.png",
   },
   {
     slug: "rim-detailing",
@@ -328,7 +320,6 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["exterior-detail", "exterior-spray-wax", "clay-bar-treatment"],
-    ogImage: "/og/rim-detailing.png",
   },
   {
     slug: "headlight-restoration",
@@ -366,7 +357,6 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["exterior-detail", "plastic-color-restoration", "clay-bar-treatment"],
-    ogImage: "/og/headlight-restoration.png",
   },
   {
     slug: "plastic-color-restoration",
@@ -404,7 +394,6 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["exterior-detail", "headlight-restoration", "clay-bar-treatment"],
-    ogImage: "/og/plastic-color-restoration.png",
   },
 ];
 

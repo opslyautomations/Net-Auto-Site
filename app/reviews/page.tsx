@@ -13,7 +13,6 @@ export const metadata: Metadata = buildMetadata({
   title: "Reviews — Net Automotive Detailing Oahu",
   description: "Read real reviews from Oahu drivers who've experienced Net Automotive Detailing. 5-star mobile auto detailing service across all of Hawaii's Oahu island.",
   slug: "reviews",
-  image: `${SITE_URL}/og/reviews.png`,
 });
 
 const reviews = [

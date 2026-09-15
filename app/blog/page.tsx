@@ -12,7 +12,6 @@ export const metadata: Metadata = buildMetadata({
   title: "Blog — Mobile Detailing Tips for Oahu Drivers",
   description: "Mobile detailing tips, guides, and local insights for Oahu, Hawaii drivers — from the experts at Net Automotive Detailing. Interior, exterior, and restoration advice.",
   slug: "blog",
-  image: `${SITE_URL}/og/blog.png`,
 });
 
 const breadcrumbs = [

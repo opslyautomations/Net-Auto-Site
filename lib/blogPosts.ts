@@ -8,7 +8,6 @@ export interface BlogPost {
   targetKeyword: string;
   datePublished: string;
   dateModified: string;
-  ogImage: string;
   content: string;
 }
 
@@ -23,7 +22,6 @@ export const blogPosts: BlogPost[] = [
     targetKeyword: "mobile auto detailing Honolulu",
     datePublished: "2025-01-15",
     dateModified: "2025-01-15",
-    ogImage: "/og/blog-honolulu-what-to-expect.png",
     content: `
 ## What Is Mobile Auto Detailing?
 
@@ -94,7 +92,6 @@ Ready to experience the difference? [Request your free quote](/contact) and we'l
     targetKeyword: "best time to detail car Oahu",
     datePublished: "2025-01-22",
     dateModified: "2025-01-22",
-    ogImage: "/og/blog-best-time-oahu.png",
     content: `
 ## Oahu Doesn't Have Four Seasons — It Has Two, and They Both Affect Your Car
 
@@ -153,7 +150,6 @@ No matter what month you're reading this, your car needs attention on Oahu. [Get
     targetKeyword: "full interior car detail",
     datePublished: "2025-02-01",
     dateModified: "2025-02-01",
-    ogImage: "/og/blog-interior-detail-included.png",
     content: `
 ## What Does "Full Interior Detail" Actually Mean?
 
@@ -251,7 +247,6 @@ Ready for a genuinely clean interior? Net Automotive Detailing comes to you anyw
     targetKeyword: "exterior detail frequency Hawaii",
     datePublished: "2025-02-08",
     dateModified: "2025-02-08",
-    ogImage: "/og/blog-exterior-detail-frequency.png",
     content: `
 ## Why Hawaii Is Hard on Car Paint
 
@@ -317,7 +312,6 @@ Net Automotive Detailing comes to you anywhere on Oahu. No drop-off, no waiting.
     targetKeyword: "salt air car care Kailua",
     datePublished: "2025-02-15",
     dateModified: "2025-02-15",
-    ogImage: "/og/blog-kailua-salt-air.png",
     content: `
 ## The Kailua Paradox: Beautiful Location, Brutal on Your Car
 
@@ -374,7 +368,6 @@ Salt air affects the exterior; Kailua Beach affects the interior. Fine white san
     targetKeyword: "headlight restoration Oahu",
     datePublished: "2025-02-22",
     dateModified: "2025-02-22",
-    ogImage: "/og/blog-headlight-restoration.png",
     content: `
 ## Why Hawaii Is Ground Zero for Headlight Oxidation
 
@@ -453,7 +446,6 @@ Net Automotive Detailing comes to you anywhere on Oahu. [Request your free quote
     targetKeyword: "mobile detailing Pearl City",
     datePublished: "2025-03-01",
     dateModified: "2025-03-01",
-    ogImage: "/og/blog-pearl-city-commuters.png",
     content: `
 ## Pearl City: Oahu's Commuter Crossroads
 
@@ -515,7 +507,6 @@ For Pearl City's busy working households, this isn't a luxury feature — it's w
     targetKeyword: "leather conditioning Hawaii",
     datePublished: "2025-03-08",
     dateModified: "2025-03-08",
-    ogImage: "/og/blog-leather-vs-cloth.png",
     content: `
 ## The Interior Question Every Hawaii Car Owner Faces
 
@@ -588,7 +579,6 @@ The common thread: both leather and cloth interiors in Hawaii need more frequent
     targetKeyword: "mobile detailing North Shore Oahu",
     datePublished: "2025-03-15",
     dateModified: "2025-03-15",
-    ogImage: "/og/blog-north-shore-guide.png",
     content: `
 ## North Shore: The Best Lifestyle on Oahu (and the Hardest on Vehicles)
 
@@ -665,7 +655,6 @@ We service [Haleiwa](/service-areas/haleiwa), [Waialua](/service-areas/waialua),
     targetKeyword: "mobile detailing Hawaii Kai",
     datePublished: "2025-03-22",
     dateModified: "2025-03-22",
-    ogImage: "/og/blog-hawaii-kai.png",
     content: `
 ## Hawaii Kai: Where Location Makes Mobile Detailing Essential
 
@@ -725,7 +714,6 @@ Given the marina environment and premium vehicle mix, Hawaii Kai clients typical
     targetKeyword: "clay bar treatment Oahu",
     datePublished: "2025-04-01",
     dateModified: "2025-04-01",
-    ogImage: "/og/blog-clay-bar-explained.png",
     content: `
 ## What Is a Clay Bar? (And Why Does It Matter?)
 
@@ -799,7 +787,6 @@ Given Oahu's combination of salt air, industrial fallout near the port and freew
     targetKeyword: "mobile detailing Kapolei",
     datePublished: "2025-04-08",
     dateModified: "2025-04-08",
-    ogImage: "/og/blog-kapolei-guide.png",
     content: `
 ## Kapolei: Oahu's Second City, Served by Mobile Detailing
 
@@ -866,7 +853,6 @@ The process is simple:
     targetKeyword: "car carpet shampoo Oahu",
     datePublished: "2025-04-15",
     dateModified: "2025-04-15",
-    ogImage: "/og/blog-carpet-shampoo-vs-vacuum.png",
     content: `
 ## Not All Dirty Carpets Are the Same
 
@@ -939,7 +925,6 @@ If you're not sure whether your car needs a vacuum or extraction, ask us — we'
     targetKeyword: "mobile detailing Kaneohe",
     datePublished: "2025-04-22",
     dateModified: "2025-04-22",
-    ogImage: "/og/blog-kaneohe-detailing.png",
     content: `
 ## Kaneohe's Rain: Why It's Uniquely Challenging for Vehicles
 
@@ -1010,7 +995,6 @@ Kaneohe's persistent humidity also affects the headliner — the fabric ceiling 
     targetKeyword: "plastic color restoration Oahu",
     datePublished: "2025-05-01",
     dateModified: "2025-05-01",
-    ogImage: "/og/blog-plastic-trim-restoration.png",
     content: `
 ## Why Black Plastic Fades Faster in Hawaii Than Almost Anywhere
 
@@ -1075,7 +1059,6 @@ Black plastic restoration is one of the most visually dramatic improvements in d
     targetKeyword: "mobile detailing Schofield Barracks",
     datePublished: "2025-05-08",
     dateModified: "2025-05-08",
-    ogImage: "/og/blog-schofield-barracks.png",
     content: `
 ## Serving Those Who Serve: Mobile Detailing at Schofield Barracks
 
@@ -1160,7 +1143,6 @@ Thank you for your service. We're honored to take care of your vehicles.
     targetKeyword: "exterior spray wax Oahu",
     datePublished: "2025-05-15",
     dateModified: "2025-05-15",
-    ogImage: "/og/blog-wax-comparison.png",
     content: `
 ## The Protection Question: Wax vs Sealant in Hawaii
 
@@ -1250,7 +1232,6 @@ This calendar keeps your paint protected year-round without requiring monthly se
     targetKeyword: "mobile detailing Mililani",
     datePublished: "2025-05-22",
     dateModified: "2025-05-22",
-    ogImage: "/og/blog-mililani-family.png",
     content: `
 ## The Two-Car Household Problem
 
@@ -1317,7 +1298,6 @@ Ready to detail both cars in one appointment? [Request your free Mililani quote 
     targetKeyword: "rim detailing Oahu",
     datePublished: "2025-06-01",
     dateModified: "2025-06-01",
-    ogImage: "/og/blog-rim-detailing.png",
     content: `
 ## The Wheel Problem That Sneaks Up on You
 
@@ -1397,7 +1377,6 @@ For vehicles near salt air: same 3–4 week schedule — salt accelerates the ir
     targetKeyword: "car detailing cost oahu",
     datePublished: "2026-05-22",
     dateModified: "2026-05-22",
-    ogImage: "/og/blog-detailing-cost-oahu.png",
     content: `
 ## The Three Things That Determine Your Price
 
@@ -1461,7 +1440,6 @@ Or call us directly at (808) 777-8964. We serve all of Oahu, by appointment, sev
     targetKeyword: "what's included in a basic car detail",
     datePublished: "2026-05-22",
     dateModified: "2026-05-22",
-    ogImage: "/og/blog-basic-car-detail.png",
     content: `
 ## The Definition of "Basic Detail"
 
@@ -1541,7 +1519,6 @@ Or call (808) 777-8964. Mobile service across all of Oahu, seven days a week by 
     targetKeyword: "interior vs exterior car detailing",
     datePublished: "2026-05-22",
     dateModified: "2026-05-22",
-    ogImage: "/og/blog-interior-vs-exterior.png",
     content: `
 ## The Short Answer
 
@@ -1620,7 +1597,6 @@ Or call (808) 777-8964. Mobile service across all of Oahu — Honolulu, Kailua, 
     targetKeyword: "mobile detailing Ewa Beach",
     datePublished: "2025-06-08",
     dateModified: "2025-06-08",
-    ogImage: "/og/blog-ewa-beach.png",
     content: `
 ## Ewa Beach: Paradise for People, Demanding for Vehicles
 

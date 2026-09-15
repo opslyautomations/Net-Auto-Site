@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import ScrollProgress from "@/components/ScrollProgress";
 import MobileCTABar from "@/components/MobileCTABar";
 import Footer from "@/components/Footer";
-import { SITE_NAME, SITE_URL, OG_DEFAULT_IMAGE, TAGLINE } from "@/lib/constants";
+import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 
 const poppins = Poppins({
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: "en_US",
     type: "website",
-    images: [{ url: OG_DEFAULT_IMAGE, width: 1200, height: 630, alt: `${SITE_NAME} — ${TAGLINE}` }],
+    // og:image comes from app/opengraph-image.tsx and each route's own card.
   },
   twitter: { card: "summary_large_image" },
   icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },

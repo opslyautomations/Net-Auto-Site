@@ -25,7 +25,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: location.metaTitle,
     description: location.metaDescription,
     slug: `service-areas/${location.slug}`,
-    image: `${SITE_URL}${location.ogImage}`,
   });
 }
 

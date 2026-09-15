@@ -14,7 +14,6 @@ export const metadata: Metadata = buildMetadata({
   title: "Service Areas — All of Oahu, Hawaii | Net Auto",
   description: "Net Automotive Detailing serves all of Oahu, Hawaii — from Honolulu to Haleiwa, Pearl City to Hawaii Kai. Mobile detailing at your door. Request a free quote.",
   slug: "service-areas",
-  image: `${SITE_URL}/og/service-areas.png`,
 });
 
 export default function ServiceAreasPage() {

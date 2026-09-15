@@ -12,9 +12,6 @@ export const HOURS_SCHEMA = "Mo-Su 07:00-19:00";
 export const GEO_LAT = 21.4389;
 export const GEO_LNG = -157.97;
 
-export const OG_DEFAULT_IMAGE = `${SITE_URL}/og/default.png`;
-export const OG_IMAGE_WIDTH = 1200;
-export const OG_IMAGE_HEIGHT = 630;
 
 export const COLORS = {
   navy: "#0A1F3D",

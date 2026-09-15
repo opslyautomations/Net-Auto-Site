@@ -20,12 +20,6 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/og/(.*)",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=86400" },
-        ],
-      },
-      {
         source: "/(.*)",
         headers: [
           { key: "X-Frame-Options", value: "SAMEORIGIN" },

@@ -10,7 +10,6 @@ export const metadata: Metadata = buildMetadata({
   title: "Contact Net Automotive Detailing | Oahu Mobile",
   description: "Contact Net Automotive Detailing for mobile auto detailing on Oahu. Call (808) 777-8964, email us, or request a free quote online. We serve all of Oahu, Hawaii.",
   slug: "contact",
-  image: `${SITE_URL}/og/contact.png`,
 });
 
 const breadcrumbs = [

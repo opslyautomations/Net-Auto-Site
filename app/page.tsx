@@ -23,7 +23,6 @@ export const metadata: Metadata = buildMetadata({
   title: "Mobile Auto Detailing Oahu | Net Automotive",
   description: "Premium mobile auto detailing across all of Oahu, Hawaii. Interior, exterior & restoration services we bring to your door. Call (808) 777-8964 for a free quote.",
   slug: "",
-  image: `${SITE_URL}/og/homepage.png`,
 });
 
 /** Rotating hero photography. The first entry is the LCP image. */

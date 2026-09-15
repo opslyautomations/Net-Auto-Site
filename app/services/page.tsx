@@ -15,7 +15,6 @@ export const metadata: Metadata = buildMetadata({
   title: "Mobile Detailing Services Oahu | Net Automotive",
   description: "All mobile auto detailing services on Oahu — interior, exterior, carpet shampoo, leather care, headlight restoration & more. We come to you. Get a free quote.",
   slug: "services",
-  image: `${SITE_URL}/og/services.png`,
 });
 
 const serviceIcons: Record<string, string> = {
