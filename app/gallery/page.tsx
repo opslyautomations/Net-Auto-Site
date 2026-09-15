@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import CTABand from "@/components/CTABand";
 import SectionHeader from "@/components/SectionHeader";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GHLForm from "@/components/GHLForm";
+import GalleryShowcase from "@/components/GalleryShowcase";
+import Magnetic from "@/components/Magnetic";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_URL, GBP_URL } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -87,41 +88,7 @@ export default function GalleryPage() {
             title="Detailing Results Across Oahu"
             subtitle="Every photo is a real Net Automotive Detailing job — trucks, sedans, SUVs, and luxury vehicles."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {galleryImages.map((img, i) => (
-              <figure
-                key={img.src}
-                className="rounded-2xl overflow-hidden group"
-                style={{ backgroundColor: "#ffffff", border: "1px solid #B1D1E7", boxShadow: "0 2px 12px rgba(10,31,61,0.06)" }}
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    priority={i < 6}
-                  />
-                  <div
-                    className="absolute top-3 left-3 text-xs font-bold px-2 py-1 rounded-full"
-                    style={{ backgroundColor: "#F08C2A", color: "#ffffff" }}
-                  >
-                    {img.serviceLabel}
-                  </div>
-                </div>
-                <figcaption className="px-4 py-3 flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-semibold" style={{ color: "#0A1F3D" }}>{img.vehicle}</p>
-                    <p className="text-xs" style={{ color: "#6B7A90" }}>{img.locationLabel}, Oahu</p>
-                  </div>
-                  <span className="text-xs font-medium px-2 py-1 rounded-full" style={{ backgroundColor: "rgba(10,31,61,0.07)", color: "#0A1F3D" }}>
-                    📍 {img.locationLabel}
-                  </span>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          <GalleryShowcase images={galleryImages} />
         </div>
       </section>
 
@@ -135,13 +102,15 @@ export default function GalleryPage() {
             We bring professional detailing to your driveway, condo, or worksite — anywhere on Oahu.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact#quote-form"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base transition-all hover:scale-105"
-              style={{ backgroundColor: "#F08C2A", color: "#ffffff" }}
-            >
-              Get Your Free Quote →
-            </Link>
+            <Magnetic>
+              <Link
+                href="/contact#quote-form"
+                className="btn-shine btn-press group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base transition-all hover:scale-105"
+                style={{ backgroundColor: "#F08C2A", color: "#ffffff" }}
+              >
+                Get Your Free Quote <span className="arrow-nudge" aria-hidden="true">→</span>
+              </Link>
+            </Magnetic>
             <a
               href={GBP_URL}
               target="_blank"

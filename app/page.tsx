@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import GHLForm from "@/components/GHLForm";
 import { homepageGalleryImages } from "@/lib/gallery";
 import TrustBar from "@/components/TrustBar";
+import StatsBand from "@/components/StatsBand";
+import HeroBackdrop from "@/components/HeroBackdrop";
+import GalleryGrid from "@/components/GalleryGrid";
+import Tilt from "@/components/Tilt";
+import Magnetic from "@/components/Magnetic";
 import CTABand from "@/components/CTABand";
 import ReviewCard from "@/components/ReviewCard";
 import ServiceCard from "@/components/ServiceCard";
@@ -19,6 +25,25 @@ export const metadata: Metadata = buildMetadata({
   slug: "",
   image: `${SITE_URL}/og/homepage.png`,
 });
+
+/** Rotating hero photography. The first entry is the LCP image. */
+const heroSlides = [
+  {
+    src: "/images/foam-wash-mobile-detailing-ewa-beach.jpeg",
+    alt: "Mobile foam wash in a driveway in Ewa Beach, Oahu",
+  },
+  {
+    src: "/images/mercedes-exterior-detail-hawaii-kai.jpeg",
+    alt: "Freshly detailed black Mercedes-Benz in Hawaii Kai, Oahu",
+  },
+  {
+    src: "/images/toyota-supra-exterior-detail-honolulu.jpeg",
+    alt: "Detailed white Toyota GR Supra in Honolulu, Oahu",
+  },
+];
+
+/** Drives the staggered hero entrance defined in styles/motion.css. */
+const step = (n: number) => ({ "--enter-step": n }) as CSSProperties;
 
 const serviceCards = [
   { slug: "interior-detail", name: "Interior Detail", icon: "🚗", description: "Steam, vacuum, and deep-clean every surface inside your vehicle." },
@@ -89,19 +114,22 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center pt-16"
-        style={{
-          background: "radial-gradient(ellipse at 70% 50%, rgba(177,209,231,0.08) 0%, transparent 60%), linear-gradient(135deg, #0A1F3D 0%, #0d2a52 100%)",
-        }}
+        className="relative min-h-screen flex items-center pt-16 overflow-hidden"
+        style={{ backgroundColor: "#0A1F3D" }}
         aria-label="Hero"
       >
-        {/* Decorative car silhouette */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-          <svg className="absolute bottom-0 right-0 w-1/2 h-auto opacity-5" viewBox="0 0 800 400" fill="white">
-            <path d="M50 300 Q100 200 200 180 L250 120 Q320 80 500 80 Q650 80 720 120 L750 180 Q800 200 800 280 L800 300 Z" />
-            <circle cx="200" cy="310" r="60" />
-            <circle cx="620" cy="310" r="60" />
-          </svg>
+        <HeroBackdrop slides={heroSlides} />
+
+        {/* Slowly drifting accent light */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div
+            className="float-slow absolute -top-32 -left-24 w-[34rem] h-[34rem] rounded-full"
+            style={{ background: "radial-gradient(circle, rgba(240,140,42,0.18) 0%, transparent 65%)" }}
+          />
+          <div
+            className="float-slower absolute -bottom-40 -right-24 w-[40rem] h-[40rem] rounded-full"
+            style={{ background: "radial-gradient(circle, rgba(177,209,231,0.16) 0%, transparent 65%)" }}
+          />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 py-20 w-full">
@@ -109,19 +137,43 @@ export default function HomePage() {
 
             {/* Left Column */}
             <div className="lg:col-span-3">
-              <p className="inline-block text-xs font-semibold uppercase tracking-widest mb-4 px-3 py-1 rounded-full" style={{ backgroundColor: "rgba(240,140,42,0.2)", color: "#F08C2A" }}>
+              <p
+                className="hero-enter inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest mb-4 px-3 py-1.5 rounded-full"
+                style={{
+                  ...step(0),
+                  backgroundColor: "rgba(240,140,42,0.18)",
+                  color: "#F08C2A",
+                  border: "1px solid rgba(240,140,42,0.35)",
+                }}
+              >
+                <span
+                  className="live-dot w-1.5 h-1.5 rounded-full"
+                  style={{ backgroundColor: "#F08C2A" }}
+                  aria-hidden="true"
+                />
                 All of Oahu, Hawaii
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white mb-6" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+
+              <h1
+                className="hero-enter text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white mb-6"
+                style={{ ...step(0), fontFamily: "var(--font-poppins), sans-serif" }}
+              >
                 Premium Mobile Auto Detailing{" "}
-                <span style={{ color: "#F08C2A" }}>Across Oahu</span>
+                <span className="text-sheen" style={{ color: "#F08C2A" }}>Across Oahu</span>
               </h1>
-              <p className="text-lg md:text-xl mb-8 leading-relaxed" style={{ color: "rgba(255,255,255,0.85)" }}>
+
+              <p
+                className="hero-enter text-lg md:text-xl mb-8 leading-relaxed"
+                style={{ ...step(1), color: "rgba(255,255,255,0.88)" }}
+              >
                 We come to you — Honolulu, Pearl City, Kapolei, Hawaii Kai, and every city in between. Showroom-quality detailing without leaving your driveway.
               </p>
 
               {/* Trust Row */}
-              <div className="flex flex-wrap gap-4 mb-8 text-sm font-medium" style={{ color: "#B1D1E7" }}>
+              <div
+                className="hero-enter flex flex-wrap gap-x-5 gap-y-2 mb-8 text-sm font-medium"
+                style={{ ...step(2), color: "#B1D1E7" }}
+              >
                 <span>⭐ 60+ Five-Star Reviews</span>
                 <span>📍 All of Oahu</span>
                 <span>🚐 Mobile Service</span>
@@ -129,34 +181,40 @@ export default function HomePage() {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="#quote-form"
-                  className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base transition-all hover:scale-105 min-h-[48px]"
-                  style={{ backgroundColor: "#F08C2A", color: "#ffffff" }}
-                >
-                  Get a Free Quote
-                </a>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base border-2 transition-all hover:scale-105 min-h-[48px]"
-                  style={{ borderColor: "rgba(255,255,255,0.4)", color: "#ffffff" }}
-                >
-                  View Services
-                </Link>
-                <a
-                  href={`tel:${PHONE_RAW}`}
-                  className="inline-flex items-center justify-center px-6 py-4 rounded-xl font-bold text-base transition-all hover:scale-105 min-h-[48px]"
-                  style={{ backgroundColor: "rgba(255,255,255,0.1)", color: "#ffffff" }}
-                >
-                  📞 {PHONE}
-                </a>
+              <div className="hero-enter flex flex-col sm:flex-row gap-4" style={step(3)}>
+                <Magnetic className="w-full sm:w-auto">
+                  <a
+                    href="#quote-form"
+                    className="btn-shine btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base transition-transform hover:scale-105 min-h-[48px]"
+                    style={{ backgroundColor: "#F08C2A", color: "#ffffff" }}
+                  >
+                    Get a Free Quote <span className="arrow-nudge" aria-hidden="true">→</span>
+                  </a>
+                </Magnetic>
+                <Magnetic className="w-full sm:w-auto">
+                  <Link
+                    href="/services"
+                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base border-2 transition-all hover:scale-105 hover:bg-white/10 min-h-[48px]"
+                    style={{ borderColor: "rgba(255,255,255,0.4)", color: "#ffffff" }}
+                  >
+                    View Services
+                  </Link>
+                </Magnetic>
+                <Magnetic className="w-full sm:w-auto">
+                  <a
+                    href={`tel:${PHONE_RAW}`}
+                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 rounded-xl font-bold text-base transition-all hover:scale-105 hover:bg-white/20 min-h-[48px]"
+                    style={{ backgroundColor: "rgba(255,255,255,0.1)", color: "#ffffff" }}
+                  >
+                    📞 {PHONE}
+                  </a>
+                </Magnetic>
               </div>
             </div>
 
             {/* Right Column — Form */}
-            <div id="quote-form" className="lg:col-span-2 scroll-mt-24">
-              <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.3)" }}>
+            <div id="quote-form" className="hero-enter lg:col-span-2 scroll-mt-24" style={step(4)}>
+              <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.35)" }}>
                 <div className="px-6 py-4" style={{ backgroundColor: "#F08C2A" }}>
                   <h2 className="text-white font-bold text-lg text-center">Request Your Free Quote</h2>
                   <p className="text-white/80 text-sm text-center">Fast response — we come to you</p>
@@ -172,7 +230,7 @@ export default function HomePage() {
       <TrustBar />
 
       {/* Services Grid */}
-      <section className="py-20 px-4" style={{ backgroundColor: "#F4F6F9" }}>
+      <section id="services" className="py-20 px-4 scroll-mt-16" style={{ backgroundColor: "#F4F6F9" }}>
         <div className="max-w-7xl mx-auto">
           <Reveal as="div" variant="up">
             <SectionHeader
@@ -184,34 +242,51 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-8">
             {serviceCards.map((s, i) => (
               <Reveal key={s.slug} as="div" variant="up" delay={Math.min(i, 4) * 80} className="flex flex-col">
-                <ServiceCard {...s} />
+                <Tilt className="h-full">
+                  <ServiceCard {...s} />
+                </Tilt>
               </Reveal>
             ))}
           </div>
           <div className="text-center">
             <Link
               href="/services"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base transition-all hover:scale-105"
+              className="btn-shine btn-press group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base transition-all hover:scale-105"
               style={{ backgroundColor: "#0A1F3D", color: "#ffffff" }}
             >
-              View All Services →
+              View All Services <span className="arrow-nudge" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
       </section>
 
+      {/* By the Numbers */}
+      <StatsBand />
+
       {/* Why Choose Section */}
       <section className="py-20 px-4" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image placeholder */}
-            <div className="rounded-2xl overflow-hidden aspect-video flex items-center justify-center scroll-scale" style={{ backgroundColor: "#F4F6F9", border: "2px dashed #B1D1E7" }}>
-              <div className="text-center p-8">
-                <div className="text-6xl mb-4" aria-hidden="true">🚗</div>
-                <p className="font-medium" style={{ color: "#6B7A90" }}>Before & After Detail</p>
-                <p className="text-sm" style={{ color: "#6B7A90" }}>Photo coming soon</p>
+            {/* Real work photo, replacing the old placeholder */}
+            <Tilt className="rounded-2xl" max={5}>
+              <div
+                className="card-media relative rounded-2xl overflow-hidden aspect-[4/3] scroll-scale card-lift"
+                style={{ border: "1px solid #B1D1E7" }}
+              >
+                <Image
+                  src="/images/mercedes-exterior-detail-hawaii-kai.jpeg"
+                  alt="Freshly detailed black Mercedes-Benz with polished wheels in a Hawaii Kai driveway — Oahu, Hawaii"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="text-white font-bold text-base">Mercedes-Benz — Exterior & Rim Detail</p>
+                  <p className="text-white/80 text-sm">Hawaii Kai, Oahu</p>
+                </div>
               </div>
-            </div>
+            </Tilt>
 
             {/* Content */}
             <div>
@@ -266,28 +341,29 @@ export default function HomePage() {
             />
           </Reveal>
           <div className="flex flex-wrap gap-3 justify-center">
-            {locations.map((loc) => (
-              <Link
-                key={loc.slug}
-                href={`/service-areas/${loc.slug}`}
-                className="px-4 py-2 rounded-full text-sm font-semibold border transition-all hover:-translate-y-0.5 hover:shadow-md"
-                style={{
-                  backgroundColor: "#0A1F3D",
-                  color: "#ffffff",
-                  borderColor: "#B1D1E7",
-                }}
-              >
-                {loc.name}
-              </Link>
+            {locations.map((loc, i) => (
+              <Reveal key={loc.slug} as="span" variant="scale" delay={Math.min(i, 10) * 45} className="inline-flex">
+                <Link
+                  href={`/service-areas/${loc.slug}`}
+                  className="location-pill-link btn-press inline-flex px-4 py-2 rounded-full text-sm font-semibold border transition-all hover:-translate-y-0.5 hover:shadow-lg"
+                  style={{
+                    backgroundColor: "#0A1F3D",
+                    color: "#ffffff",
+                    borderColor: "#B1D1E7",
+                  }}
+                >
+                  {loc.name}
+                </Link>
+              </Reveal>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link
               href="/service-areas"
-              className="inline-flex items-center justify-center px-8 py-3 rounded-xl font-bold text-sm border-2 transition-all hover:scale-105"
+              className="btn-press group inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl font-bold text-sm border-2 transition-all hover:scale-105"
               style={{ borderColor: "#0A1F3D", color: "#0A1F3D" }}
             >
-              View All Service Areas →
+              View All Service Areas <span className="arrow-nudge" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -303,37 +379,17 @@ export default function HomePage() {
               subtitle="Real results from Net Automotive Detailing jobs across Oahu."
             />
           </Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-            {homepageGalleryImages.map((img) => (
-              <Link
-                key={img.src}
-                href="/gallery"
-                className="group relative aspect-video rounded-xl overflow-hidden block scroll-scale"
-                style={{ border: "1px solid #B1D1E7" }}
-                aria-label={img.title}
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-xs font-semibold truncate">{img.title}</p>
-                  <p className="text-white/80 text-xs">{img.locationLabel}, Oahu</p>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <GalleryGrid
+            images={homepageGalleryImages}
+            className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8"
+          />
           <div className="text-center">
             <Link
               href="/gallery"
-              className="inline-flex items-center justify-center px-8 py-3 rounded-xl font-bold text-sm transition-all hover:scale-105"
+              className="btn-shine btn-press group inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl font-bold text-sm transition-all hover:scale-105"
               style={{ backgroundColor: "#0A1F3D", color: "#ffffff" }}
             >
-              View Full Gallery →
+              View Full Gallery <span className="arrow-nudge" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -352,17 +408,19 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {reviews.map((review, i) => (
               <Reveal key={review.reviewerName} as="div" variant="up" delay={i * 80} className="flex flex-col">
-                <ReviewCard {...review} />
+                <Tilt className="h-full" max={4}>
+                  <ReviewCard {...review} />
+                </Tilt>
               </Reveal>
             ))}
           </div>
           <div className="text-center">
             <Link
               href="/reviews"
-              className="inline-flex items-center justify-center px-8 py-3 rounded-xl font-bold text-sm border-2 transition-all hover:scale-105"
+              className="btn-press group inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl font-bold text-sm border-2 transition-all hover:scale-105"
               style={{ borderColor: "#0A1F3D", color: "#0A1F3D" }}
             >
-              Read All Reviews →
+              Read All Reviews <span className="arrow-nudge" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

@@ -7,7 +7,7 @@ type RevealProps = {
   delay?: number;
   as?: ElementType;
   className?: string;
-  variant?: 'up' | 'left' | 'right' | 'fade';
+  variant?: 'up' | 'left' | 'right' | 'fade' | 'scale' | 'blur';
 };
 
 export function Reveal({
@@ -34,6 +34,12 @@ export function Reveal({
         if (entry.isIntersecting) {
           setShown(true);
           io.unobserve(el);
+          // Release the compositor layer once the entrance has played out.
+          el.addEventListener(
+            'transitionend',
+            () => el.classList.add('is-settled'),
+            { once: true },
+          );
         }
       },
       { rootMargin: '0px 0px -10% 0px', threshold: 0.12 },

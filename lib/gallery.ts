@@ -21,7 +21,7 @@ export const galleryImages: GalleryImage[] = [
     serviceLabel: "Exterior Detail",
     location: "honolulu",
     locationLabel: "Honolulu",
-    width: 1200,
+    width: 900,
     height: 1600,
   },
   {
@@ -105,8 +105,8 @@ export const galleryImages: GalleryImage[] = [
     serviceLabel: "Exterior Detail",
     location: "hawaii-kai",
     locationLabel: "Hawaii Kai",
-    width: 1600,
-    height: 1200,
+    width: 1200,
+    height: 1600,
   },
   {
     src: "/images/toyota-tundra-exterior-detail-kaneohe.jpeg",
@@ -141,8 +141,8 @@ export const galleryImages: GalleryImage[] = [
     serviceLabel: "Interior Detail",
     location: "haleiwa",
     locationLabel: "Haleiwa",
-    width: 1600,
-    height: 1200,
+    width: 1200,
+    height: 1600,
   },
   {
     src: "/images/chrysler-300-exterior-detail-pearl-city.jpeg",

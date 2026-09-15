@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { PHONE, PHONE_RAW, SITE_NAME } from "@/lib/constants";
 
 const services = [
@@ -41,6 +42,7 @@ const areas = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -53,6 +55,10 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // "/" only matches exactly; every other link also matches its sub-routes.
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 
   const navBg = scrolled ? "rgba(10,31,61,0.98)" : "transparent";
   const navBorder = scrolled ? "1px solid rgba(177,209,231,0.2)" : "1px solid transparent";
@@ -73,13 +79,25 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6 text-sm font-medium" aria-label="Main navigation">
-            <Link href="/" className="text-white/90 hover:text-white transition-colors">Home</Link>
-            <Link href="/about" className="text-white/90 hover:text-white transition-colors">About</Link>
+            <Link href="/" className="nav-underline text-white/90 hover:text-white transition-colors" data-active={isActive("/")} aria-current={isActive("/") ? "page" : undefined}>Home</Link>
+            <Link href="/about" className="nav-underline text-white/90 hover:text-white transition-colors" data-active={isActive("/about")} aria-current={isActive("/about") ? "page" : undefined}>About</Link>
 
             {/* Services Dropdown */}
             <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
-              <button className="flex items-center gap-1 text-white/90 hover:text-white transition-colors" aria-expanded={servicesOpen} aria-haspopup="true">
-                Services <span aria-hidden="true">▾</span>
+              <button
+                className="nav-underline flex items-center gap-1 text-white/90 hover:text-white transition-colors"
+                data-active={isActive("/services")}
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+              >
+                Services{" "}
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300"
+                  style={{ transform: servicesOpen ? "rotate(180deg)" : "none" }}
+                >
+                  ▾
+                </span>
               </button>
               {servicesOpen && (
                 <div className="absolute top-full left-0 pt-2 w-56 z-50">
@@ -96,8 +114,20 @@ export default function Navbar() {
 
             {/* Service Areas Dropdown */}
             <div className="relative" onMouseEnter={() => setAreasOpen(true)} onMouseLeave={() => setAreasOpen(false)}>
-              <button className="flex items-center gap-1 text-white/90 hover:text-white transition-colors" aria-expanded={areasOpen} aria-haspopup="true">
-                Service Areas <span aria-hidden="true">▾</span>
+              <button
+                className="nav-underline flex items-center gap-1 text-white/90 hover:text-white transition-colors"
+                data-active={isActive("/service-areas")}
+                aria-expanded={areasOpen}
+                aria-haspopup="true"
+              >
+                Service Areas{" "}
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300"
+                  style={{ transform: areasOpen ? "rotate(180deg)" : "none" }}
+                >
+                  ▾
+                </span>
               </button>
               {areasOpen && (
                 <div className="absolute top-full left-0 pt-2 w-80 z-50">
@@ -117,24 +147,24 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link href="/reviews" className="text-white/90 hover:text-white transition-colors">Reviews</Link>
-            <Link href="/gallery" className="text-white/90 hover:text-white transition-colors">Gallery</Link>
-            <Link href="/blog" className="text-white/90 hover:text-white transition-colors">Blog</Link>
-            <Link href="/contact" className="text-white/90 hover:text-white transition-colors">Contact</Link>
+            <Link href="/reviews" className="nav-underline text-white/90 hover:text-white transition-colors" data-active={isActive("/reviews")} aria-current={isActive("/reviews") ? "page" : undefined}>Reviews</Link>
+            <Link href="/gallery" className="nav-underline text-white/90 hover:text-white transition-colors" data-active={isActive("/gallery")} aria-current={isActive("/gallery") ? "page" : undefined}>Gallery</Link>
+            <Link href="/blog" className="nav-underline text-white/90 hover:text-white transition-colors" data-active={isActive("/blog")} aria-current={isActive("/blog") ? "page" : undefined}>Blog</Link>
+            <Link href="/contact" className="nav-underline text-white/90 hover:text-white transition-colors" data-active={isActive("/contact")} aria-current={isActive("/contact") ? "page" : undefined}>Contact</Link>
           </nav>
 
           {/* Right CTAs */}
           <div className="hidden lg:flex items-center gap-3">
             <a
               href={`tel:${PHONE_RAW}`}
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all hover:scale-105"
+              className="pulse-ring btn-press flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all hover:scale-105"
               style={{ backgroundColor: "#F08C2A", color: "#ffffff" }}
             >
               📞 {PHONE}
             </a>
             <Link
               href="/contact#quote-form"
-              className="px-4 py-2 rounded-full text-sm font-bold border-2 transition-all hover:scale-105"
+              className="btn-shine btn-press px-4 py-2 rounded-full text-sm font-bold border-2 transition-all hover:scale-105"
               style={{ borderColor: "#ffffff", color: "#ffffff" }}
             >
               Get Free Quote

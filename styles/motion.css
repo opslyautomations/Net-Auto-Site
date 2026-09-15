@@ -1,18 +1,107 @@
-/* ---------- Scroll reveals (IntersectionObserver-driven) ---------- */
-.reveal {
+/* ============================================================
+   Net Automotive Detailing — motion & interaction layer
+   All animation is transform/opacity only (compositor-safe, CLS=0).
+   Every effect is disabled under prefers-reduced-motion.
+   ============================================================ */
+
+/* ---------- Shared easing tokens ---------- */
+:root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Scroll reveals (IntersectionObserver-driven) ----------
+   Every rule here is scoped to .js, which an inline script in app/layout.tsx
+   puts on <html> before first paint. That means content is only ever hidden
+   when the JavaScript that reveals it is actually running — if the bundle
+   fails or is blocked, the page renders as plain, fully visible content
+   instead of a wall of opacity:0 sections. */
+.js .reveal {
   opacity: 0;
-  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.6s var(--ease-smooth), transform 0.6s var(--ease-smooth);
   will-change: opacity, transform;
 }
-.reveal--up    { transform: translateY(24px); }
-.reveal--left  { transform: translateX(-24px); }
-.reveal--right { transform: translateX(24px); }
-.reveal--fade  { transform: none; }
+.js .reveal--up    { transform: translateY(24px); }
+.js .reveal--left  { transform: translateX(-24px); }
+.js .reveal--right { transform: translateX(24px); }
+.js .reveal--fade  { transform: none; }
+.js .reveal--scale { transform: scale(0.94); }
+.js .reveal--blur  { transform: translateY(16px); filter: blur(6px); }
 
-.reveal.is-in { opacity: 1; transform: none; }
+.js .reveal.is-in {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
 
-/* ---------- Parallax / scroll-linked (pure CSS, progressive) ---------- */
+/* Reveals settle — drop will-change so we don't pin layers forever */
+.reveal.is-settled { will-change: auto; }
+
+/* ---------- Hero entrance choreography (runs on load, no JS) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-enter {
+    opacity: 0;
+    animation: heroEnter 0.62s var(--ease-out-expo) forwards;
+    animation-delay: calc(var(--enter-step, 0) * 90ms);
+  }
+  @keyframes heroEnter {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* Hero backdrop photo — slow Ken Burns drift */
+  .ken-burns {
+    animation: kenBurns 22s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+  @keyframes kenBurns {
+    from { transform: scale(1.06) translate3d(0, 0, 0); }
+    to   { transform: scale(1.16) translate3d(-1.5%, -1.5%, 0); }
+  }
+}
+
+/* ---------- Hero readability scrim ----------
+   Wide screens: a horizontal wash that shields the left-hand text column while
+   leaving the right side of the photo visible behind the quote form.
+   Narrow screens: the copy spans the full width, so the wash goes vertical —
+   dark where the text sits, lighter through the middle so the photo still reads
+   instead of being flattened to a near-solid navy block. */
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(10, 31, 61, 0.94) 0%,
+    rgba(10, 31, 61, 0.86) 38%,
+    rgba(10, 31, 61, 0.62) 62%,
+    rgba(13, 42, 82, 0.72) 100%
+  );
+}
+@media (max-width: 1023px) {
+  .hero-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 31, 61, 0.90) 0%,
+      rgba(10, 31, 61, 0.86) 32%,
+      rgba(10, 31, 61, 0.66) 58%,
+      rgba(10, 31, 61, 0.86) 100%
+    );
+  }
+}
+
+/* ---------- Scroll cue ---------- */
+.scroll-cue-dot {
+  animation: scrollCue 1.9s var(--ease-smooth) infinite;
+}
+@keyframes scrollCue {
+  0%        { transform: translateY(0);    opacity: 0; }
+  28%       { opacity: 1; }
+  72%       { opacity: 1; }
+  100%      { transform: translateY(14px); opacity: 0; }
+}
+
+/* ---------- Parallax / scroll-linked (progressive enhancement) ---------- */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .parallax-slow {
@@ -36,11 +125,9 @@
   }
 }
 
-/* ---------- Card interactions (compositor-only, CLS-safe) ---------- */
+/* ---------- Card interactions ---------- */
 .card-lift {
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform;
+  transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
 }
 .card-lift:hover {
   transform: translateY(-6px);
@@ -49,8 +136,7 @@
 
 .card-media { overflow: hidden; }
 .card-media img {
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform;
+  transition: transform 0.5s var(--ease-smooth);
 }
 .card-lift:hover .card-media img { transform: scale(1.06); }
 
@@ -71,12 +157,240 @@
 }
 .card-glow:hover::before { opacity: 1; }
 
+/* ---------- 3D tilt + cursor spotlight (JS feeds the custom props) ---------- */
+.tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.4s var(--ease-smooth);
+  will-change: transform;
+}
+/* Rotation only — the lift is owned by .card-lift so the two never double up. */
+.tilt.is-tilting {
+  transition: transform 0.08s linear;
+  transform: perspective(900px)
+             rotateX(var(--tilt-x, 0deg))
+             rotateY(var(--tilt-y, 0deg));
+}
+
+/* --mx / --my are custom properties, so a .tilt ancestor can feed the spotlight
+   on a descendant card without that card needing to be a Client Component. */
+.spotlight { position: relative; isolation: isolate; }
+.spotlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    240px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(240, 140, 42, 0.16),
+    transparent 62%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.spotlight:hover::after { opacity: 1; }
+.spotlight > * { position: relative; z-index: 1; }
+
+/* ---------- Button micro-interactions ---------- */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.38),
+    transparent
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  z-index: 1;
+}
+.btn-shine:hover::before { animation: btnShine 0.85s var(--ease-smooth); }
+@keyframes btnShine {
+  to { left: 140%; }
+}
+
+.btn-press { transition: transform 0.18s var(--ease-out-back); }
+.btn-press:active { transform: scale(0.96); }
+
+/* Magnetic pull — JS sets --pull-x / --pull-y */
+.magnetic {
+  transition: transform 0.35s var(--ease-out-expo);
+  will-change: transform;
+}
+.magnetic.is-pulling {
+  transition: transform 0.12s linear;
+  transform: translate(var(--pull-x, 0px), var(--pull-y, 0px));
+}
+
+/* Arrow nudge on hover */
+.arrow-nudge { display: inline-block; transition: transform 0.28s var(--ease-out-back); }
+.group:hover .arrow-nudge,
+a:hover > .arrow-nudge,
+button:hover > .arrow-nudge { transform: translateX(5px); }
+
+/* ---------- Animated underline for nav links ---------- */
+.nav-underline { position: relative; }
+.nav-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: #F08C2A;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.32s var(--ease-out-expo);
+}
+.nav-underline:hover::after,
+.nav-underline:focus-visible::after { transform: scaleX(1); }
+.nav-underline[data-active='true']::after { transform: scaleX(1); }
+
+/* ---------- Live pulse (phone CTA, "available now" dot) ---------- */
+.pulse-ring { position: relative; }
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid currentColor;
+  opacity: 0;
+  animation: pulseRing 2.6s var(--ease-smooth) infinite;
+  pointer-events: none;
+}
+@keyframes pulseRing {
+  0%   { transform: scale(1);    opacity: 0.55; }
+  70%  { transform: scale(1.22); opacity: 0; }
+  100% { transform: scale(1.22); opacity: 0; }
+}
+
+.live-dot { position: relative; display: inline-block; }
+.live-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.35;
+  animation: liveDot 2s ease-out infinite;
+}
+@keyframes liveDot {
+  0%   { transform: scale(0.7); opacity: 0.5; }
+  80%  { transform: scale(1.7); opacity: 0; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* ---------- Scroll progress bar ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform-origin: 0 50%;
+  transform: scaleX(var(--progress, 0));
+  background: linear-gradient(90deg, #F08C2A, #ffb266);
+  z-index: 60;
+  pointer-events: none;
+}
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-progress--css {
+      animation: scrollProgress linear both;
+      animation-timeline: scroll(root block);
+    }
+    @keyframes scrollProgress {
+      from { transform: scaleX(0); }
+      to   { transform: scaleX(1); }
+    }
+  }
+}
+
+/* ---------- Sticky mobile CTA bar ---------- */
+.cta-bar {
+  transform: translateY(110%);
+  transition: transform 0.4s var(--ease-out-expo);
+}
+.cta-bar.is-visible { transform: translateY(0); }
+
+/* ---------- Lightbox ---------- */
+.lightbox-backdrop {
+  animation: lightboxIn 0.24s ease-out both;
+}
+@keyframes lightboxIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.lightbox-figure {
+  animation: lightboxPop 0.34s var(--ease-out-expo) both;
+}
+@keyframes lightboxPop {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Count-up odometer ---------- */
+.count-up { font-variant-numeric: tabular-nums; }
+
+/* ---------- Gradient sheen on the hero accent word ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .text-sheen {
+    background: linear-gradient(100deg, #F08C2A 0%, #ffc078 45%, #F08C2A 70%);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textSheen 7s linear infinite;
+  }
+  @keyframes textSheen {
+    from { background-position: 180% 0; }
+    to   { background-position: -40% 0; }
+  }
+}
+
+/* ---------- Floating accent blobs in the hero ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .float-slow  { animation: floatY 13s ease-in-out infinite alternate; }
+  .float-slower { animation: floatY 19s ease-in-out infinite alternate-reverse; }
+  @keyframes floatY {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(14px, -22px, 0); }
+  }
+}
+
 /* ---------- Global reduced-motion kill switch ---------- */
 @media (prefers-reduced-motion: reduce) {
   .reveal,
-  .reveal.is-in { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .reveal.is-in { opacity: 1 !important; transform: none !important; filter: none !important; transition: none !important; }
   .parallax-slow, .scroll-scale { animation: none !important; transform: none !important; }
   .card-lift, .card-media img { transition: none !important; }
   .card-lift:hover { transform: none !important; }
   .card-lift:hover .card-media img { transform: none !important; }
+  .hero-enter { opacity: 1 !important; animation: none !important; }
+  .ken-burns { animation: none !important; }
+  .scroll-cue-dot { animation: none !important; }
+  .tilt, .tilt.is-tilting { transform: none !important; transition: none !important; }
+  .magnetic, .magnetic.is-pulling { transform: none !important; transition: none !important; }
+  .btn-shine::before { animation: none !important; display: none; }
+  .btn-press:active { transform: none !important; }
+  .pulse-ring::before, .live-dot::after { animation: none !important; opacity: 0 !important; }
+  .nav-underline::after { transition: none !important; }
+  .cta-bar { transition: none !important; }
+  .lightbox-backdrop, .lightbox-figure { animation: none !important; }
+  .text-sheen { animation: none !important; }
+  .float-slow, .float-slower { animation: none !important; }
+  .arrow-nudge { transition: none !important; }
+  .group:hover .arrow-nudge { transform: none !important; }
 }

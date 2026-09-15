@@ -4,6 +4,8 @@ import Script from "next/script";
 import "./globals.css";
 import "@/styles/motion.css";
 import Navbar from "@/components/Navbar";
+import ScrollProgress from "@/components/ScrollProgress";
+import MobileCTABar from "@/components/MobileCTABar";
 import Footer from "@/components/Footer";
 import { SITE_NAME, SITE_URL, OG_DEFAULT_IMAGE, TAGLINE } from "@/lib/constants";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
@@ -46,6 +48,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
       <head>
+        {/* Marks the document as JS-capable before first paint. Scroll-reveal
+            styles key off .js, so content is never hidden when the script that
+            would reveal it isn't running. */}
+        <script
+          dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }}
+        />
         <link rel="preconnect" href="https://api.opslyautomations.com" />
         <link rel="dns-prefetch" href="https://widgets.leadconnectorhq.com" />
         <script
@@ -58,11 +66,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen flex flex-col antialiased" style={{ fontFamily: "var(--font-inter), Arial, Helvetica, sans-serif" }}>
+        <ScrollProgress />
         <Navbar />
         <main id="main-content" className="flex-1">
           {children}
         </main>
         <Footer />
+        <MobileCTABar />
 
         {/* GHL Form Script */}
         <Script

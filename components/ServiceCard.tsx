@@ -19,7 +19,7 @@ export default function ServiceCard({
     return (
       <Link
         href={`/services/${slug}`}
-        className="flex items-center gap-3 p-4 rounded-xl border transition-all hover:shadow-md hover:-translate-y-0.5"
+        className="btn-press flex items-center gap-3 p-4 rounded-xl border transition-all hover:shadow-md hover:-translate-y-0.5"
         style={{ borderColor: "#B1D1E7", backgroundColor: "#ffffff" }}
       >
         <span className="text-2xl" aria-hidden="true">{icon}</span>
@@ -30,7 +30,7 @@ export default function ServiceCard({
 
   return (
     <div
-      className="rounded-2xl border p-6 flex flex-col gap-4 card-lift card-glow h-full"
+      className="group/card rounded-2xl border p-6 flex flex-col gap-4 card-lift card-glow spotlight h-full"
       style={{
         borderColor: "#B1D1E7",
         backgroundColor: "#ffffff",
@@ -38,7 +38,7 @@ export default function ServiceCard({
       }}
     >
       <div
-        className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
+        className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl transition-transform duration-300 group-hover/card:scale-110"
         style={{ backgroundColor: "rgba(240,140,42,0.1)" }}
         aria-hidden="true"
       >
@@ -56,11 +56,11 @@ export default function ServiceCard({
       </div>
       <Link
         href={`/services/${slug}`}
-        className="mt-auto inline-flex items-center gap-1 font-semibold text-sm transition-colors hover:gap-2"
+        className="mt-auto inline-flex items-center gap-1 font-semibold text-sm transition-colors"
         style={{ color: "#F08C2A" }}
         aria-label={`Learn more about ${name}`}
       >
-        Learn More →
+        Learn More <span className="arrow-nudge" aria-hidden="true">→</span>
       </Link>
     </div>
   );
