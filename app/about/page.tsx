@@ -11,7 +11,7 @@ import PageHero from "@/components/PageHero";
 import { media } from "@/lib/media";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Net Automotive Detailing | Oahu's Mobile",
+  title: "About Net Automotive Detailing | Oahu Mobile Detailer",
   description: "Learn about Net Automotive Detailing — Oahu's trusted mobile auto detailing specialists. Professional, mobile, and Hawaii-experienced. Meet the team.",
   slug: "about",
 });

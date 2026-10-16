@@ -1,3 +1,8 @@
+import { keywordPostsInterior } from "@/lib/blog/keywordPostsInterior";
+import { keywordPostsIsland } from "@/lib/blog/keywordPostsIsland";
+import { keywordPostsGuides } from "@/lib/blog/keywordPostsGuides";
+import { keywordPostsLocal } from "@/lib/blog/keywordPostsLocal";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -11,7 +16,7 @@ export interface BlogPost {
   content: string;
 }
 
-export const blogPosts: BlogPost[] = [
+const launchPosts: BlogPost[] = [
   {
     slug: "mobile-auto-detailing-honolulu-what-to-expect",
     title: "Mobile Auto Detailing in Honolulu: What to Expect",
@@ -1664,6 +1669,19 @@ We come to your Ewa Beach driveway. You go about your day. Your car is ready whe
 [Net Automotive Detailing](/service-areas/ewa-beach) comes to Ewa Beach with mobile service that covers all of these needs. [Request your free quote today](/contact) and protect your vehicle from everything the leeward coast throws at it.
     `,
   },
+];
+
+/**
+ * Newest first — getRecentPosts and the blog index read this order.
+ * The keyword batches (Oct 2026) target the Oahu search terms mapped in
+ * lib/keywords.ts; the launch posts follow.
+ */
+export const blogPosts: BlogPost[] = [
+  ...keywordPostsInterior,
+  ...keywordPostsIsland,
+  ...keywordPostsGuides,
+  ...keywordPostsLocal,
+  ...launchPosts,
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

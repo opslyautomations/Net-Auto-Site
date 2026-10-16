@@ -14,6 +14,8 @@ import { SITE_URL, PHONE, PHONE_RAW } from "@/lib/constants";
 import { locationBusinessSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 import PageHero from "@/components/PageHero";
 import { getLocationImage } from "@/lib/media";
+import KeywordSection from "@/components/KeywordSection";
+import { locationKeywords } from "@/lib/keywords";
 
 export async function generateStaticParams() {
   return locations.map((l) => ({ slug: l.slug }));
@@ -49,6 +51,8 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
   if (!location) notFound();
 
   const nearby = getNearbyLocations(slug);
+  const keywords = locationKeywords[location.slug];
+  const faqs = [...location.faqs, ...(keywords?.faqs ?? [])];
   const breadcrumbs = [
     { name: "Home", url: `${SITE_URL}/` },
     { name: "Service Areas", url: `${SITE_URL}/service-areas` },
@@ -63,7 +67,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(location.faqs)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }}
       />
       <script
         type="application/ld+json"
@@ -110,6 +114,11 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           </div>
         </div>
       </section>
+
+      {/* Search-focused copy, neighborhoods served + related guides */}
+      {keywords && (
+        <KeywordSection content={keywords} neighborhoods={keywords.neighborhoods} areaName={location.name} tone="white" />
+      )}
 
       {/* Services Offered */}
       <section className="py-16 px-4" style={{ backgroundColor: "#F4F6F9" }}>
@@ -179,7 +188,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       <section className="py-16 px-4" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-3xl mx-auto">
           <SectionHeader title={`FAQs — Mobile Detailing in ${location.name}`} />
-          <FAQAccordion faqs={location.faqs} />
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

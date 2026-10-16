@@ -14,6 +14,8 @@ import { SITE_URL, PHONE, PHONE_RAW } from "@/lib/constants";
 import { serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 import PageHero from "@/components/PageHero";
 import { getServiceImage } from "@/lib/media";
+import KeywordSection from "@/components/KeywordSection";
+import { serviceKeywords } from "@/lib/keywords";
 
 export async function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -49,6 +51,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   if (!service) notFound();
 
   const related = getRelatedServices(slug);
+  const keywords = serviceKeywords[service.slug];
+  const faqs = [...service.faqs, ...(keywords?.faqs ?? [])];
   const breadcrumbs = [
     { name: "Home", url: `${SITE_URL}/` },
     { name: "Services", url: `${SITE_URL}/services` },
@@ -63,7 +67,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(service.faqs)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }}
       />
       <script
         type="application/ld+json"
@@ -106,6 +110,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <p className="text-lg leading-relaxed" style={{ color: "#0A1F3D" }}>{service.intro}</p>
         </div>
       </section>
+
+      {/* Search-focused copy + related guides */}
+      {keywords && <KeywordSection content={keywords} tone="white" />}
 
       {/* What's Included */}
       <section className="py-16 px-4" style={{ backgroundColor: "#F4F6F9" }}>
@@ -165,7 +172,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="py-16 px-4" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-3xl mx-auto">
           <SectionHeader title={`Frequently Asked Questions — ${service.name}`} />
-          <FAQAccordion faqs={service.faqs} />
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

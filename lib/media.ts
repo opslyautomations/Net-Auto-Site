@@ -78,3 +78,35 @@ export const getLocationImage = (slug: string): MediaImage => {
   const hash = [...slug].reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
   return islandBackdrops[hash % islandBackdrops.length];
 };
+
+/** Topic → photo rules for blog posts, checked in order against slug + keyword. */
+const postImageRules: [RegExp, MediaImage][] = [
+  [/pcs|shipping|military|schofield/, media.kualoa],
+  [/sunset|best-time|north-shore/, media.northShoreSunset],
+  [/mold|musty|smell|mildew/, media.cabin],
+  [/pet-hair|seat|upholster/, media.rearSeats],
+  [/leather/, media.whiteLeather],
+  [/interior|basic-car-detail/, media.dashboardBrush],
+  [/carpet|sand/, media.cabin],
+  [/trim|plastic/, media.foamedWheel],
+  [/red-dirt|(^|-)rim|wheel|brake/, media.tireBrush],
+  [/headlight|sun|uv/, media.headlight],
+  [/ceramic|wax|sealant|clay|water-spot|paint/, media.polisher],
+  [/rust|salt/, media.foamWheel],
+  [/condo/, media.handWashCoupe],
+  [/car-wash|exterior/, media.snowFoam],
+  [/selling|cost/, media.handWashCoupe],
+  [/worth-it|how-long|before-car-detail|best-mobile/, media.spongeWash],
+];
+
+/**
+ * Featured photo for a blog post: a real job photo for posts about a specific
+ * service area, otherwise a stock photo matched to the post's topic.
+ */
+export const getPostImage = (slug: string, keyword = ""): MediaImage => {
+  const text = `${slug} ${keyword.toLowerCase().replace(/\s+/g, "-")}`;
+  for (const [pattern, image] of postImageRules) if (pattern.test(text)) return image;
+  const town = galleryImages.find((img) => text.includes(img.location));
+  if (town) return { src: town.src, alt: town.alt };
+  return media.handWashCoupe;
+};

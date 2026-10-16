@@ -87,7 +87,7 @@ export default function BlogPage() {
                         {post.category}
                       </span>
                       <span className="text-xs" style={{ color: "#6B7A90" }}>
-                        {new Date(post.datePublished).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+                        {new Date(post.datePublished).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" })}
                       </span>
                     </div>
                     <h2 className="font-bold text-base leading-snug" style={{ color: "#0A1F3D" }}>

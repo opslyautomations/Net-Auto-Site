@@ -21,8 +21,14 @@ export function buildMetadata({
   const url = slug ? `${SITE_URL}/${slug}` : SITE_URL;
   const ogTitle = title.replace(` | ${SITE_NAME}`, "");
 
+  // The root layout appends " | Net Automotive Detailing" to page titles.
+  // Skip that when the title already names the brand, or when the suffix
+  // would push it past the ~60 characters Google shows in results.
+  const suffixed = `${title} | ${SITE_NAME}`;
+  const useAsIs = title.includes("Net Auto") || suffixed.length > 60;
+
   return {
-    title,
+    title: useAsIs ? { absolute: title } : title,
     description,
     metadataBase: new URL(SITE_URL),
     alternates: {

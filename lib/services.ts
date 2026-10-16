@@ -21,9 +21,9 @@ export const services: Service[] = [
   {
     slug: "interior-detail",
     name: "Interior Detail",
-    metaTitle: "Interior Car Detailing Oahu | Mobile Service",
-    metaDescription: "Professional mobile interior car detailing on Oahu. Vacuum, steam clean, dashboard, console, windows & deodorize — we come to you. Request a free quote today.",
-    h1: "Mobile Interior Car Detailing on Oahu",
+    metaTitle: "Interior Car Cleaning & Detailing Oahu | Mobile",
+    metaDescription: "Interior car cleaning on Oahu at your driveway, office, or condo. Steam cleaning, vacuum, and odor removal across Honolulu and the island. Get a free quote.",
+    h1: "Mobile Interior Car Cleaning & Detailing on Oahu",
     tagline: "A spotless cabin, delivered to your driveway.",
     intro: "Your car's interior takes a beating — sand from Kailua, fast-food spills, pet hair, and the daily grind of island commuting. Net Automotive Detailing's mobile interior detail service brings professional-grade cleaning to your home, office, or worksite. No drop-off, no waiting — just showroom results wherever you park.",
     whatsIncluded: [
@@ -60,8 +60,8 @@ export const services: Service[] = [
   {
     slug: "exterior-detail",
     name: "Exterior Detail",
-    metaTitle: "Exterior Car Detailing Oahu | Mobile Hand Wash",
-    metaDescription: "Mobile exterior car detailing on Oahu — hand wash, decontamination, tire shine & more. We come to your driveway. Book your free quote with Net Automotive Detailing.",
+    metaTitle: "Exterior Car Detailing & Mobile Car Wash Oahu",
+    metaDescription: "Exterior car detailing on Oahu that goes beyond a mobile car wash: hand wash, decontamination, wheels, and tire shine at your door. Get a free quote.",
     h1: "Mobile Exterior Car Detailing on Oahu",
     tagline: "Salt, sand, and road grime — gone.",
     intro: "Oahu's salt air, trade-wind dust, and intense UV rays attack your car's paint every single day. Net Automotive Detailing's mobile exterior detail service uses a thorough, multi-step hand wash process to remove surface contamination and restore that just-waxed look — without you leaving home.",
@@ -100,9 +100,9 @@ export const services: Service[] = [
   {
     slug: "carpet-shampoo",
     name: "Carpet Shampoo",
-    metaTitle: "Car Carpet Shampoo Oahu | Hot-Water Extraction",
-    metaDescription: "Mobile car carpet shampoo on Oahu using hot-water extraction. Remove stains, odors & deep grime from your floor mats and carpets. Get a free quote today.",
-    h1: "Carpet Shampoo Service for Cars — Oahu Mobile",
+    metaTitle: "Car Carpet Cleaning & Shampoo Oahu | Mobile",
+    metaDescription: "Car carpet cleaning on Oahu with hot-water extraction. Lifts beach sand, red dirt, stains, and odors at your home or office. Request a free quote.",
+    h1: "Car Carpet Cleaning & Shampoo — Oahu Mobile",
     tagline: "Deep clean from floor to mat — extracted, not just sprayed.",
     intro: "Sand from the beach, mud from hiking trails, fast-food spills, and the general wear of island living — it all ends up in your carpet. Net Automotive Detailing's mobile carpet shampoo service uses professional hot-water extraction to pull out embedded dirt, stains, and odors that vacuuming alone can't touch.",
     whatsIncluded: [
@@ -138,9 +138,9 @@ export const services: Service[] = [
   {
     slug: "seat-shampoo",
     name: "Seat Shampoo",
-    metaTitle: "Car Seat Shampoo Oahu | Cloth Seat Cleaning",
-    metaDescription: "Mobile cloth seat shampoo and stain removal on Oahu. Deep extraction cleaning for fabric seats — we come to your location. Request your free quote today.",
-    h1: "Cloth Seat Shampoo & Stain Removal — Oahu",
+    metaTitle: "Car Seat Cleaning & Shampoo Oahu | Mobile",
+    metaDescription: "Car seat cleaning on Oahu for fabric seats. Deep shampoo and extraction for stains, sweat, sunscreen, and spills, done where you park. Get a free quote.",
+    h1: "Car Seat Cleaning & Shampoo — Mobile on Oahu",
     tagline: "Fresh, clean seats without the trip to the shop.",
     intro: "Cloth seats absorb everything — sweat, sunscreen, beach moisture, food, and pet odors. Standard vacuuming doesn't cut it. Net Automotive Detailing's mobile seat shampoo service uses deep hot-water extraction and targeted stain treatment to restore your fabric seats to a clean, fresh state — right at your location.",
     whatsIncluded: [
@@ -175,9 +175,9 @@ export const services: Service[] = [
   {
     slug: "leather-conditioning",
     name: "Leather Conditioning",
-    metaTitle: "Leather Conditioning Oahu | Mobile Leather Care",
-    metaDescription: "Mobile leather cleaning and conditioning on Oahu. pH-balanced cleaning, UV protection and conditioning for tropical heat. Request a free quote from Net Automotive Detailing.",
-    h1: "Leather Cleaning & Conditioning — Mobile, Oahu",
+    metaTitle: "Leather Car Seat Cleaning & Conditioning Oahu",
+    metaDescription: "Leather car seat cleaning and UV-protective conditioning on Oahu. Prevent cracking and fading from Hawaii sun with mobile service. Get a free quote.",
+    h1: "Leather Car Seat Cleaning & Conditioning — Oahu",
     tagline: "Protect your leather from Hawaii's heat and humidity.",
     intro: "Leather interiors look luxurious — until Hawaii's intense UV rays, salt air, and humidity cause them to crack, fade, and stiffen. Net Automotive Detailing's mobile leather conditioning service cleans, conditions, and protects your leather seats, dash, and panels using pH-balanced professional products designed for tropical climates.",
     whatsIncluded: [
@@ -249,8 +249,8 @@ export const services: Service[] = [
   {
     slug: "exterior-spray-wax",
     name: "Exterior Spray Wax",
-    metaTitle: "Exterior Spray Wax Oahu | Paint Protection Mobile",
-    metaDescription: "Mobile exterior spray wax and paint protection on Oahu. Quick-application gloss boost and protection layer — we come to you. Request a free quote today.",
+    metaTitle: "Car Wax & Paint Protection Oahu | Spray Wax",
+    metaDescription: "Car wax built for Oahu's salt air and sun. Mobile spray wax adds gloss and UV protection after a hand wash, at your home or office. Get a free quote.",
     h1: "Mobile Spray Wax & Paint Protection — Oahu",
     tagline: "Quick, effective paint protection for island drivers.",
     intro: "Between the intense Hawaiian sun, salt air, and daily driving, your paint needs consistent protection. Net Automotive Detailing's mobile spray wax service applies a professional-grade protective layer that boosts gloss, repels water, and shields your clear coat from UV damage — fast, effective, and done at your location.",
@@ -286,7 +286,7 @@ export const services: Service[] = [
   {
     slug: "rim-detailing",
     name: "Rim Detailing",
-    metaTitle: "Rim & Wheel Detailing Oahu | Brake Dust Removal",
+    metaTitle: "Rim & Wheel Cleaning Oahu | Brake Dust Removal",
     metaDescription: "Mobile rim and wheel detailing on Oahu. Deep cleaning of barrel, face, and lug nuts — brake dust removal and wheel restoration. Get a free quote today.",
     h1: "Wheel & Rim Detailing on Oahu",
     tagline: "Clean wheels make the whole car look better.",
@@ -324,8 +324,8 @@ export const services: Service[] = [
   {
     slug: "headlight-restoration",
     name: "Headlight Restoration",
-    metaTitle: "Headlight Restoration Oahu | Mobile Service",
-    metaDescription: "Mobile headlight restoration on Oahu — sand, polish, and seal cloudy headlights for clarity and safer night driving. Book your free quote with Net Automotive Detailing.",
+    metaTitle: "Headlight Restoration Oahu & Honolulu | Mobile",
+    metaDescription: "Headlight restoration on Oahu: we sand, polish, and UV-seal cloudy, yellow headlights at your home or office. Brighter, clearer lenses. Get a free quote.",
     h1: "Headlight Restoration Service — Oahu Mobile",
     tagline: "See clearly again — and pass your safety inspection.",
     intro: "Hawaii's relentless UV exposure oxidizes plastic headlight lenses faster than almost anywhere else in the U.S. Cloudy, yellowed headlights reduce visibility by up to 80% and can cause you to fail your Hawaii safety inspection. Net Automotive Detailing's mobile headlight restoration service sands, polishes, and UV-seals your lenses to like-new clarity — at your location.",
@@ -361,8 +361,8 @@ export const services: Service[] = [
   {
     slug: "plastic-color-restoration",
     name: "Plastic Color Restoration",
-    metaTitle: "Plastic Trim Restoration Oahu | Faded Trim Fix",
-    metaDescription: "Mobile plastic trim and color restoration on Oahu. Restore faded black plastic trim with UV-resistant finish — we come to you. Get a free quote from Net Automotive Detailing.",
+    metaTitle: "Faded Trim Restoration Oahu | Plastic Trim Fix",
+    metaDescription: "Faded trim restoration on Oahu. We restore sun-faded black plastic trim, bumpers, and mirrors with a UV-resistant finish at your door. Get a free quote.",
     h1: "Trim & Plastic Color Restoration — Oahu",
     tagline: "Bring your faded trim back to showroom black.",
     intro: "Black plastic trim fades to a chalky gray faster in Hawaii's UV-intense climate than almost anywhere else. Whether it's your bumper trim, side cladding, mirror housings, or wheel arches — faded plastic makes even a clean car look old. Net Automotive Detailing's mobile plastic color restoration service restores deep, rich black to your trim using UV-resistant professional treatments.",

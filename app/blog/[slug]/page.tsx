@@ -7,9 +7,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { blogPosts, getBlogPostBySlug, getRecentPosts } from "@/lib/blogPosts";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
-import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import PageHero from "@/components/PageHero";
-import { media } from "@/lib/media";
+import { getPostImage } from "@/lib/media";
 
 function renderInline(text: string, kp = ""): ReactNode {
   const parts: ReactNode[] = [];
@@ -49,6 +49,30 @@ function renderInline(text: string, kp = ""): ReactNode {
   return <>{parts}</>;
 }
 
+/**
+ * Pulls Q&A pairs out of a post's "## Frequently Asked Questions" section
+ * (### question, then answer paragraphs) for FAQPage structured data.
+ */
+function extractFaqs(content: string): { question: string; answer: string }[] {
+  const start = content.search(/^## Frequently Asked Questions\s*$/m);
+  if (start === -1) return [];
+  const rest = content.slice(start).split("\n").slice(1);
+  const end = rest.findIndex((l) => l.trim().startsWith("## "));
+  const lines = end === -1 ? rest : rest.slice(0, end);
+
+  const faqs: { question: string; answer: string }[] = [];
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (line.startsWith("### ")) faqs.push({ question: line.slice(4), answer: "" });
+    else if (line && faqs.length) {
+      const last = faqs[faqs.length - 1];
+      const plain = line.replace(/\*\*(.+?)\*\*/g, "$1").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+      last.answer = last.answer ? `${last.answer} ${plain}` : plain;
+    }
+  }
+  return faqs.filter((f) => f.answer);
+}
+
 export async function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
 }
@@ -73,6 +97,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound();
 
   const relatedPosts = getRecentPosts(3, slug);
+  const faqs = extractFaqs(post.content);
   const breadcrumbs = [
     { name: "Home", url: `${SITE_URL}/` },
     { name: "Blog", url: `${SITE_URL}/blog` },
@@ -80,7 +105,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   ];
 
   const formattedDate = new Date(post.datePublished).toLocaleDateString("en-US", {
-    year: "numeric", month: "long", day: "numeric",
+    year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
   });
 
   return (
@@ -102,9 +127,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbs)) }}
       />
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }}
+        />
+      )}
 
       {/* Hero */}
-      <PageHero image={media.polisher} compact>
+      <PageHero image={getPostImage(post.slug, post.targetKeyword)} compact>
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs crumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Article", href: `/blog/${post.slug}` }]} />
           <span
@@ -121,19 +152,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </p>
         </div>
       </PageHero>
-
-      {/* Featured image placeholder */}
-      <div
-        className="w-full max-h-96 flex items-center justify-center"
-        style={{ backgroundColor: "#F4F6F9", borderBottom: "1px solid #B1D1E7", minHeight: "200px" }}
-        role="img"
-        aria-label={`Featured image for: ${post.title}`}
-      >
-        <div className="text-center py-12">
-          <div className="text-5xl mb-2" aria-hidden="true">📝</div>
-          <p className="text-sm" style={{ color: "#6B7A90" }}>Featured image coming soon</p>
-        </div>
-      </div>
 
       {/* Article Content */}
       <section className="py-16 px-4" style={{ backgroundColor: "#ffffff" }}>
