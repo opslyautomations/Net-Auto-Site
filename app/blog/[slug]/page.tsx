@@ -8,6 +8,8 @@ import { blogPosts, getBlogPostBySlug, getRecentPosts } from "@/lib/blogPosts";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import PageHero from "@/components/PageHero";
+import { media } from "@/lib/media";
 
 function renderInline(text: string, kp = ""): ReactNode {
   const parts: ReactNode[] = [];
@@ -102,7 +104,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       />
 
       {/* Hero */}
-      <section className="pt-24 pb-12 px-4" style={{ backgroundColor: "#0A1F3D" }}>
+      <PageHero image={media.polisher} compact>
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs crumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Article", href: `/blog/${post.slug}` }]} />
           <span
@@ -118,7 +120,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             By {SITE_NAME} · {formattedDate}
           </p>
         </div>
-      </section>
+      </PageHero>
 
       {/* Featured image placeholder */}
       <div

@@ -7,6 +7,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schema";
+import PageHero from "@/components/PageHero";
+import { media } from "@/lib/media";
 
 export const metadata: Metadata = buildMetadata({
   title: "About Net Automotive Detailing | Oahu's Mobile",
@@ -28,7 +30,7 @@ export default function AboutPage() {
       />
 
       {/* Hero */}
-      <section className="pt-24 pb-16 px-4" style={{ backgroundColor: "#0A1F3D" }}>
+      <PageHero image={media.kualoa}>
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs crumbs={[{ name: "Home", href: "/" }, { name: "About", href: "/about" }]} />
           <h1 className="text-3xl md:text-4xl font-black text-white mb-4" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
@@ -38,7 +40,7 @@ export default function AboutPage() {
             Professional mobile auto detailing, brought to your door — anywhere on Oahu, Hawaii.
           </p>
         </div>
-      </section>
+      </PageHero>
 
       {/* Meet Elijah — Owner Bio */}
       <section className="py-16 px-4" style={{ backgroundColor: "#ffffff" }}>

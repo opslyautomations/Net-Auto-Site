@@ -8,6 +8,7 @@ import GHLForm from "@/components/GHLForm";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_URL, GBP_URL } from "@/lib/constants";
 import { aggregateRatingSchema, breadcrumbSchema } from "@/lib/schema";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = buildMetadata({
   title: "Reviews — Net Automotive Detailing Oahu",
@@ -120,7 +121,7 @@ export default function ReviewsPage() {
       />
 
       {/* Hero */}
-      <section className="pt-24 pb-16 px-4" style={{ backgroundColor: "#0A1F3D" }}>
+      <PageHero image={{ src: "/images/mercedes-exterior-detail-hawaii-kai.jpeg", alt: "" }}>
         <div className="max-w-4xl mx-auto text-center">
           <Breadcrumbs crumbs={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }]} />
           <h1 className="text-4xl md:text-5xl font-black text-white mb-4" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
@@ -135,7 +136,7 @@ export default function ReviewsPage() {
             Over 60 five-star reviews from real Oahu drivers — verified on Google.
           </p>
         </div>
-      </section>
+      </PageHero>
 
       {/* Aggregate Rating Banner */}
       <section style={{ backgroundColor: "#F08C2A" }}>

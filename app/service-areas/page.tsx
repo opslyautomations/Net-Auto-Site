@@ -9,6 +9,8 @@ import { locations } from "@/lib/locations";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schema";
+import PageHero from "@/components/PageHero";
+import { media } from "@/lib/media";
 
 export const metadata: Metadata = buildMetadata({
   title: "Service Areas — All of Oahu, Hawaii | Net Auto",
@@ -30,7 +32,7 @@ export default function ServiceAreasPage() {
       />
 
       {/* Hero */}
-      <section className="pt-24 pb-16 px-4" style={{ backgroundColor: "#0A1F3D" }}>
+      <PageHero image={media.hanauma}>
         <div className="max-w-4xl mx-auto text-center">
           <Breadcrumbs crumbs={[{ name: "Home", href: "/" }, { name: "Service Areas", href: "/service-areas" }]} />
           <h1 className="text-4xl md:text-5xl font-black text-white mb-4" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
@@ -40,7 +42,7 @@ export default function ServiceAreasPage() {
             Net Automotive Detailing brings professional mobile detailing to every corner of Oahu — from urban Honolulu to the North Shore, from Kapolei on the west side to Kailua on the windward coast. No matter where you are on the island, we come to you.
           </p>
         </div>
-      </section>
+      </PageHero>
 
       {/* Cities Grid */}
       <section className="py-16 px-4" style={{ backgroundColor: "#F4F6F9" }}>

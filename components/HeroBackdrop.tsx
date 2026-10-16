@@ -75,7 +75,7 @@ export default function HeroBackdrop({ slides, interval = 6500 }: HeroBackdropPr
     // vertical sliver. Bounding the photo to one viewport keeps the crop
     // legible and lets the rest of the hero sit on flat navy.
     <div
-      className="absolute left-0 right-0 top-0 h-[100svh] lg:bottom-0 lg:h-auto overflow-hidden"
+      className="hero-media absolute left-0 right-0 top-0 h-[100svh] lg:bottom-0 lg:h-auto overflow-hidden"
       aria-hidden="true"
     >
       {visible.map((slide, i) => (

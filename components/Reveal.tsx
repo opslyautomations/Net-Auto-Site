@@ -7,7 +7,7 @@ type RevealProps = {
   delay?: number;
   as?: ElementType;
   className?: string;
-  variant?: 'up' | 'left' | 'right' | 'fade' | 'scale' | 'blur';
+  variant?: 'up' | 'left' | 'right' | 'fade' | 'scale' | 'blur' | 'zoom';
 };
 
 export function Reveal({

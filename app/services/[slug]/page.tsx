@@ -12,6 +12,8 @@ import { locations } from "@/lib/locations";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_URL, PHONE, PHONE_RAW } from "@/lib/constants";
 import { serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
+import PageHero from "@/components/PageHero";
+import { getServiceImage } from "@/lib/media";
 
 export async function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -69,7 +71,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       />
 
       {/* Hero */}
-      <section className="pt-24 pb-16 px-4" style={{ backgroundColor: "#0A1F3D" }}>
+      <PageHero image={getServiceImage(service.slug)}>
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs crumbs={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }, { name: service.name, href: `/services/${service.slug}` }]} />
           <div className="flex items-center gap-4 mb-4">
@@ -96,7 +98,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </a>
           </div>
         </div>
-      </section>
+      </PageHero>
 
       {/* Intro */}
       <section className="py-16 px-4" style={{ backgroundColor: "#ffffff" }}>

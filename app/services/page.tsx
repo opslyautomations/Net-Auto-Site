@@ -10,6 +10,8 @@ import { services } from "@/lib/services";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schema";
+import PageHero from "@/components/PageHero";
+import { media } from "@/lib/media";
 
 export const metadata: Metadata = buildMetadata({
   title: "Mobile Detailing Services Oahu | Net Automotive",
@@ -44,7 +46,7 @@ export default function ServicesPage() {
       />
 
       {/* Hero */}
-      <section className="pt-24 pb-12 px-4" style={{ backgroundColor: "#0A1F3D" }}>
+      <PageHero image={media.foamWheel} compact>
         <div className="max-w-4xl mx-auto text-center">
           <Breadcrumbs crumbs={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }]} />
           <h1 className="text-4xl md:text-5xl font-black text-white mb-4" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
@@ -61,7 +63,7 @@ export default function ServicesPage() {
             Get a Free Quote →
           </Link>
         </div>
-      </section>
+      </PageHero>
 
       {/* Services Grid */}
       <section className="py-16 px-4" style={{ backgroundColor: "#F4F6F9" }}>

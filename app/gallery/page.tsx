@@ -10,6 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_URL, GBP_URL } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schema";
 import { galleryImages } from "@/lib/gallery";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = buildMetadata({
   title: "Gallery — Before & After Detailing Oahu | Net Auto",
@@ -31,7 +32,7 @@ export default function GalleryPage() {
       />
 
       {/* Hero */}
-      <section className="pt-24 pb-16 px-4" style={{ backgroundColor: "#0A1F3D" }}>
+      <PageHero image={{ src: "/images/toyota-supra-exterior-detail-honolulu.jpeg", alt: "" }}>
         <div className="max-w-4xl mx-auto text-center">
           <Breadcrumbs crumbs={[{ name: "Home", href: "/" }, { name: "Gallery", href: "/gallery" }]} />
           <h1 className="text-4xl md:text-5xl font-black text-white mb-4" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
@@ -59,7 +60,7 @@ export default function GalleryPage() {
             </a>
           </div>
         </div>
-      </section>
+      </PageHero>
 
       {/* Stats bar */}
       <div style={{ backgroundColor: "#F08C2A" }}>

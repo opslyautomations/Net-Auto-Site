@@ -7,6 +7,8 @@ import { blogPosts } from "@/lib/blogPosts";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schema";
+import PageHero from "@/components/PageHero";
+import { media } from "@/lib/media";
 
 export const metadata: Metadata = buildMetadata({
   title: "Blog — Mobile Detailing Tips for Oahu Drivers",
@@ -34,7 +36,7 @@ export default function BlogPage() {
       />
 
       {/* Hero */}
-      <section className="pt-24 pb-16 px-4" style={{ backgroundColor: "#0A1F3D" }}>
+      <PageHero image={media.spongeWash}>
         <div className="max-w-4xl mx-auto text-center">
           <Breadcrumbs crumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }]} />
           <h1 className="text-4xl md:text-5xl font-black text-white mb-4" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
@@ -44,7 +46,7 @@ export default function BlogPage() {
             Expert advice on car detailing, Hawaii-specific vehicle care, and local insights for every Oahu community.
           </p>
         </div>
-      </section>
+      </PageHero>
 
       {/* Blog Grid */}
       <section className="py-16 px-4" style={{ backgroundColor: "#F4F6F9" }}>

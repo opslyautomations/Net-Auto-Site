@@ -370,6 +370,125 @@ button:hover > .arrow-nudge { transform: translateX(5px); }
   }
 }
 
+/* ============================================================
+   Scroll scenes — components/ScrollScene.tsx writes --p (0 → 1)
+   onto the scene element; everything below derives from it.
+   Scenes with data-rest="1" render their finished state before
+   JS runs and under reduced motion.
+   ============================================================ */
+.scene { --p: 0; }
+.scene[data-rest="1"] { --p: 1; }
+
+/* Zoom-in reveal variant for <Reveal variant="zoom"> */
+.js .reveal--zoom {
+  transform: scale(0.86);
+  transition-duration: 0.9s;
+}
+
+/* Hover zoom inside service tiles (separate layer from the parallax drift) */
+.service-tile__zoom { transition: transform 0.8s var(--ease-smooth); }
+.service-tile:hover .service-tile__zoom,
+.service-tile:focus-visible .service-tile__zoom { transform: scale(1.08); }
+
+/* Inner-page hero scrim */
+.page-hero-scrim {
+  background:
+    linear-gradient(0deg, rgba(10, 31, 61, 0.9) 0%, transparent 45%),
+    linear-gradient(100deg, rgba(10, 31, 61, 0.95) 0%, rgba(10, 31, 61, 0.84) 45%, rgba(10, 31, 61, 0.5) 100%);
+}
+@media (max-width: 767px) {
+  .page-hero-scrim { background: rgba(10, 31, 61, 0.8); }
+}
+
+/* ---------- Marquee ribbons ---------- */
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.marquee__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .marquee__track { animation: marquee var(--marquee-duration, 40s) linear infinite; }
+  .marquee__track--reverse { animation-direction: reverse; }
+  .marquee:hover .marquee__track,
+  .marquee:focus-within .marquee__track { animation-play-state: paused; }
+
+  /* Generic parallax drift for <ParallaxImage> and service tiles */
+  .parallax-media {
+    transform: translate3d(0, calc((var(--p) - 0.5) * var(--parallax, 16%)), 0);
+    will-change: transform;
+  }
+  .parallax-media--zoom img { transform: scale(calc(1.18 - var(--p) * 0.18)); }
+
+  /* Heroes: backdrop sinks and zooms in as you scroll away; copy lifts off */
+  .hero-scene .hero-media,
+  .page-hero .hero-media {
+    transform: translate3d(0, calc(var(--p) * 30%), 0) scale(calc(1 + var(--p) * 0.15));
+    transform-origin: 50% 0;
+  }
+  .page-hero .hero-copy {
+    transform: translate3d(0, calc(var(--p) * -70px), 0);
+    opacity: calc(1 - var(--p) * 1.2);
+  }
+  @media (min-width: 1024px) {
+    .hero-scene .hero-copy {
+      transform: translate3d(0, calc(var(--p) * -90px), 0);
+      opacity: calc(1 - var(--p) * 1.4);
+    }
+  }
+
+  /* Cinematic zoom reveal: framed photo grows to full bleed while the
+     photo inside zooms out, then the copy rises in. */
+  .zoom-scene {
+    height: 230vh;
+    --z: clamp(0, calc(var(--p) * 1.7), 1);
+    --c: clamp(0, calc((var(--p) - 0.42) * 4), 1);
+  }
+  .zoom-frame {
+    transform: scale(calc(0.58 + var(--z) * 0.42));
+    border-radius: calc((1 - var(--z)) * 36px);
+  }
+  .zoom-photo { transform: scale(calc(1.35 - var(--z) * 0.35)); }
+  .zoom-shade { opacity: calc(0.25 + var(--c) * 0.75); }
+  .zoom-copy {
+    opacity: var(--c);
+    transform: translate3d(0, calc((1 - var(--c)) * 48px), 0);
+  }
+
+  /* Closing CTA backdrop zooms out as it arrives */
+  .cta-media { transform: scale(calc(1.3 - var(--p) * 0.3)); }
+
+  /* Layered collage — each layer drifts at its own speed */
+  .collage__back  { transform: translate3d(0, calc((var(--p) - 0.5) * -50px), 0); }
+  .collage__front {
+    transform: translate3d(0, calc((var(--p) - 0.5) * 90px), 0)
+               rotate(calc((var(--p) - 0.5) * 6deg));
+  }
+  .collage__badge { transform: translate3d(calc((var(--p) - 0.5) * -48px), 0, 0); }
+
+  /* How-it-works rail draws itself */
+  .steps__fill {
+    transform-origin: 50% 0;
+    transform: scaleY(var(--p));
+  }
+
+  /* Gallery rows slide in opposite directions */
+  .strip__row--a { transform: translate3d(calc(var(--p) * -22%), 0, 0); }
+  .strip__row--b { transform: translate3d(calc(-22% + var(--p) * 22%), 0, 0); }
+}
+
 /* ---------- Global reduced-motion kill switch ---------- */
 @media (prefers-reduced-motion: reduce) {
   .reveal,
@@ -393,4 +512,7 @@ button:hover > .arrow-nudge { transform: translateX(5px); }
   .float-slow, .float-slower { animation: none !important; }
   .arrow-nudge { transition: none !important; }
   .group:hover .arrow-nudge { transform: none !important; }
+  .service-tile__zoom { transition: none !important; transform: none !important; }
+  /* Without the animation, let the ribbons scroll by hand instead of clipping */
+  .marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
 }
