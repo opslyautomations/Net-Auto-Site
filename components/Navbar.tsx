@@ -72,14 +72,21 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-1 text-white font-black text-xl tracking-wide" style={{ fontFamily: "var(--font-poppins), sans-serif" }} aria-label={`${SITE_NAME} — Home`}>
+          {/* The company name is the home button — there is no separate "Home" link */}
+          <Link
+            href="/"
+            className="btn-press flex items-center gap-1 text-white font-black text-xl tracking-wide transition-opacity hover:opacity-80"
+            style={{ fontFamily: "var(--font-poppins), sans-serif" }}
+            aria-label={`${SITE_NAME} — Home`}
+            aria-current={isActive("/") ? "page" : undefined}
+            onClick={() => setMobileOpen(false)}
+          >
             <span style={{ color: "#F08C2A" }}>NET</span>
-            <span className="hidden sm:inline text-white font-bold text-base ml-1 tracking-normal">AUTOMOTIVE DETAILING</span>
+            <span className="text-white font-bold text-sm sm:text-base ml-1 tracking-normal whitespace-nowrap">AUTOMOTIVE DETAILING</span>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6 text-sm font-medium" aria-label="Main navigation">
-            <Link href="/" className="nav-underline text-white/90 hover:text-white transition-colors" data-active={isActive("/")} aria-current={isActive("/") ? "page" : undefined}>Home</Link>
             <Link href="/about" className="nav-underline text-white/90 hover:text-white transition-colors" data-active={isActive("/about")} aria-current={isActive("/about") ? "page" : undefined}>About</Link>
 
             {/* Services Dropdown */}
@@ -196,7 +203,6 @@ export default function Navbar() {
         <div className="fixed inset-0 z-40 overflow-y-auto" style={{ backgroundColor: "#0A1F3D" }}>
           <div className="min-h-screen flex flex-col px-6 pt-20 pb-8">
             <nav className="flex-1 flex flex-col gap-1" aria-label="Mobile navigation">
-              <Link href="/" className="py-4 text-white text-lg font-semibold border-b border-white/10" onClick={() => setMobileOpen(false)}>Home</Link>
               <Link href="/about" className="py-4 text-white text-lg font-semibold border-b border-white/10" onClick={() => setMobileOpen(false)}>About</Link>
 
               {/* Services Accordion */}
