@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_NAME, TAGLINE, PHONE, PHONE_RAW, EMAIL, SERVICE_AREA, HOURS } from "@/lib/constants";
 
 const serviceLinks = [
@@ -57,11 +58,7 @@ export default function Footer() {
           {/* Column 1 — Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4" aria-label={`${SITE_NAME} — Home`}>
-              <div className="text-2xl font-black tracking-wide" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
-                <span style={{ color: "#F08C2A" }}>NET</span>
-                <span className="text-white"> AUTOMOTIVE</span>
-                <div className="text-white font-bold text-sm tracking-widest uppercase">DETAILING</div>
-              </div>
+              <Image src="/images/logo.png" alt={SITE_NAME} width={128} height={128} className="h-32 w-32" />
             </Link>
             <p className="text-sm font-medium mb-4" style={{ color: "#B1D1E7" }}>{TAGLINE}</p>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>

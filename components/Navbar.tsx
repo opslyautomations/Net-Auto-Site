@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { PHONE, PHONE_RAW, SITE_NAME } from "@/lib/constants";
 
@@ -71,18 +72,15 @@ export default function Navbar() {
         role="banner"
       >
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 md:h-18">
-          {/* Logo */}
-          {/* The company name is the home button — there is no separate "Home" link */}
+          {/* Logo — the badge is the home button; there is no separate "Home" link */}
           <Link
             href="/"
-            className="btn-press flex items-center gap-1 text-white font-black text-xl tracking-wide transition-opacity hover:opacity-80"
-            style={{ fontFamily: "var(--font-poppins), sans-serif" }}
+            className="btn-press flex items-center shrink-0 transition-opacity hover:opacity-80"
             aria-label={`${SITE_NAME} — Home`}
             aria-current={isActive("/") ? "page" : undefined}
             onClick={() => setMobileOpen(false)}
           >
-            <span style={{ color: "#F08C2A" }}>NET</span>
-            <span className="text-white font-bold text-sm sm:text-base ml-1 tracking-normal whitespace-nowrap">AUTOMOTIVE DETAILING</span>
+            <Image src="/images/logo.png" alt={SITE_NAME} width={56} height={56} preload className="h-12 w-12 md:h-14 md:w-14" />
           </Link>
 
           {/* Desktop Nav */}
