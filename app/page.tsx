@@ -207,11 +207,8 @@ export default function HomePage() {
 
             {/* Form */}
             <div id="quote-form" className="hero-enter lg:col-span-2 scroll-mt-24" style={step(4)}>
-              <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "0 24px 60px -12px rgba(0,0,0,0.5)" }}>
-                <div className="px-6 py-4" style={{ backgroundColor: "#F08C2A" }}>
-                  <h2 className="text-white font-bold text-lg text-center">Request Your Free Quote</h2>
-                  <p className="text-white/85 text-sm text-center">Fast response — we come to you</p>
-                </div>
+              <h2 className="sr-only">Request your free quote</h2>
+              <div className="rounded-2xl" style={{ boxShadow: "0 24px 60px -12px rgba(0,0,0,0.5)" }}>
                 <GHLForm />
               </div>
             </div>
