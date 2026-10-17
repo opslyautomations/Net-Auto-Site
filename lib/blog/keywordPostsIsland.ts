@@ -469,7 +469,7 @@ A car with faded paint looks dull, chalky or lighter than it used to, especially
 
 ### Oxidized paint
 
-Oxidized paint on a car has a dull, hazy or chalky surface. If you rub a clean white cloth on it and it picks up color, the paint itself is oxidizing. Light oxidation can often be improved by machine polishing, which removes a very thin layer of the damaged surface. That's a paint correction job, and it's something to take to a paint correction specialist. Net Automotive Detailing doesn't offer polishing or paint correction, but we're always happy to tell you honestly if we think your paint needs it.
+Oxidized paint on a car has a dull, hazy or chalky surface. If you rub a clean white cloth on it and it picks up color, the paint itself is oxidizing. Light oxidation can often be improved by machine polishing, which removes a very thin layer of the damaged surface. That's a paint correction job, and it's one our [paint correction](/services/paint-correction) service handles. We'll always tell you honestly whether your paint needs it.
 
 ### Clear coat failure
 
@@ -489,7 +489,7 @@ For best results, wax goes on clean, decontaminated paint. A clay bar treatment 
 
 ### Other protection options
 
-You'll also hear about ceramic coatings and paint protection film (PPF). Ceramic coatings are long-lasting chemical-resistant layers, and PPF is a clear film applied over paint, often on the front end. Both are offered by specialist installers, typically after paint correction, and both can be good choices depending on your car and budget. Net Automotive Detailing doesn't install them. Our sibling post, [ceramic coating vs. wax in Hawaii](/blog/ceramic-coating-vs-wax-hawaii), compares the options honestly.
+You'll also hear about ceramic coatings and paint protection film (PPF). Ceramic coatings are long-lasting chemical-resistant layers, and PPF is a clear film applied over paint, often on the front end. Coatings are typically applied after paint correction, and both can be good choices depending on your car and budget. Net Automotive Detailing offers [ceramic coating](/services/ceramic-coating) but doesn't install PPF. Our sibling post, [ceramic coating vs. wax in Hawaii](/blog/ceramic-coating-vs-wax-hawaii), compares the options honestly.
 
 ### Car covers: useful, with a catch
 
@@ -553,7 +553,7 @@ Parking in the shade is most effective. After that, keep a fresh layer of wax or
 
 ### Can oxidized car paint be fixed?
 
-Light oxidation can often be improved with machine polishing by a paint correction specialist. If the clear coat is peeling or flaking, the panel needs to be refinished by a body shop.
+Light oxidation can often be improved with machine polishing, which is what our [paint correction](/services/paint-correction) service does. If the clear coat is peeling or flaking, the panel needs to be refinished by a body shop.
 
 ### How do I stop my dashboard from cracking?
 
@@ -629,7 +629,7 @@ When deposits sit through repeated wet-dry cycles and heat, they harden and bond
 
 ### Type 3: Etching
 
-Minerals and contaminants, combined with heat, can eventually eat into the clear coat itself. Etched spots look like small craters or rings that remain even after the surface is fully clean and decontaminated. Under good light you may be able to see the outline as a slight depression. Chemical removers can't fix etching, because the damage is physical. It requires machine polishing to level the clear coat, which is paint correction work for a specialist. Net Automotive Detailing doesn't offer paint correction, but we can help you tell whether you're dealing with deposits or etching.
+Minerals and contaminants, combined with heat, can eventually eat into the clear coat itself. Etched spots look like small craters or rings that remain even after the surface is fully clean and decontaminated. Under good light you may be able to see the outline as a slight depression. Chemical removers can't fix etching, because the damage is physical. It requires machine polishing to level the clear coat, which is [paint correction](/services/paint-correction) work. We can help you tell whether you're dealing with deposits or etching, and correct it if it's etched.
 
 ## How to Remove Water Spots From Car Paint
 
@@ -657,7 +657,7 @@ Once the surface is clean, apply wax or sealant. A protected surface makes water
 
 ### If the spots won't budge
 
-If spots remain after a proper wash, a water spot remover and clay, they're likely etched. At that point, consult a paint correction specialist about polishing. Scrubbing harder or using stronger chemicals will only risk damaging the paint.
+If spots remain after a proper wash, a water spot remover and clay, they're likely etched. At that point, the fix is polishing, which is what paint correction does. Scrubbing harder or using stronger chemicals will only risk damaging the paint.
 
 ### What not to do
 

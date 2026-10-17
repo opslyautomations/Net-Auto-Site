@@ -18,7 +18,7 @@ If you're weighing ceramic coating vs wax for a car on Oahu, here is the honest 
 
 Neither one is "better" for everyone. A coating makes the most sense for a newer or well-kept car you plan to keep for years. Regular waxing makes the most sense for daily drivers, older paint, leased cars and owners who would rather maintain protection on a simple schedule.
 
-A quick note on transparency: Net Automotive Detailing does not install ceramic coatings or perform paint correction. We offer [exterior spray wax](/services/exterior-spray-wax) and [clay bar treatment](/services/clay-bar-treatment), among other services. This guide explains both options so you can make the right call for your car, whoever does the work.
+A quick note on transparency: Net Automotive Detailing offers both. We apply [exterior spray wax](/services/exterior-spray-wax) and install [ceramic coating](/services/ceramic-coating), with [paint correction](/services/paint-correction) as the prep. That means we have no reason to push you toward one over the other. This guide explains both options honestly so you can make the right call for your car.
 
 ## What Wax Actually Does
 
@@ -63,7 +63,7 @@ A proper ceramic coating job usually looks like this:
 5. A panel wipe to strip polishing oils so the coating can bond
 6. Careful application panel by panel, then a cure period during which the car must stay dry and clean
 
-Steps 4 and 6 are where most of the time and cost come from. Hawaii adds a wrinkle here too. Heat and humidity change how quickly coatings "flash" and cure, and trade winds can blow dust and salt mist onto freshly coated panels. Most serious installers prefer a controlled, covered environment for this reason. If you are shopping for ceramic coating on Oahu, ask the installer exactly where the work will happen and how long the car needs to stay dry afterward.
+Steps 4 and 6 are where most of the time and cost come from. Hawaii adds a wrinkle here too. Heat and humidity change how quickly coatings "flash" and cure, and trade winds can blow dust and salt mist onto freshly coated panels. Most serious installers prefer a controlled, covered environment for this reason. If you are shopping for ceramic coating on Oahu, ask the installer exactly where the work will happen and how long the car needs to stay dry afterward. When we coat a car on site, we need a shaded, dry, covered spot such as a garage or carport, and we'll reschedule rather than coat in rain or blowing dust.
 
 ## Ceramic Coating Hawaii Cost: What Drives the Price
 
@@ -138,11 +138,11 @@ When water stops beading tightly on the paint. In Hawaii's sun and salt air, tha
 
 ### Does Net Automotive Detailing offer ceramic coating?
 
-No. We offer exterior detailing, clay bar treatment and exterior spray wax, plus interior and restoration services. If a coating is the right fit for your car, we'll tell you so honestly.
+Yes. We offer [ceramic coating](/services/ceramic-coating) with paint correction prep, as well as exterior spray wax and clay bar treatment. Since we do both, we'll tell you honestly which one fits your car.
 
 ## Keep Your Paint Protected Without the Hassle
 
-If you want clean, decontaminated, protected paint on a simple schedule, a mobile exterior detail with clay bar and spray wax is an easy place to start. Eli comes to your home, condo or workplace anywhere on Oahu. Every quote depends on your vehicle's size, condition and the services you choose, and every detail is satisfaction guaranteed.
+If you want clean, decontaminated, protected paint on a simple schedule, a mobile exterior detail with clay bar and spray wax is an easy place to start. If you want long-term protection, ask about ceramic coating. Eli comes to your home, condo or workplace anywhere on Oahu. Every quote depends on your vehicle's size, condition and the services you choose, and every detail is satisfaction guaranteed.
 
 [Get Your Free Quote →](/contact#quote-form)
 
@@ -306,7 +306,7 @@ Or call us directly at (808) 777-8964. We serve all of Oahu, by appointment, sev
 
 For most Oahu car owners, yes, mobile detailing is worth it, especially if your time is limited, you live in a condo or you commute on the H-1. You get a thorough, professional clean without driving anywhere, waiting in a lobby or arranging a ride. The car gets detailed where it already sits.
 
-That said, "is mobile detailing worth it" depends on what you value. If you enjoy washing your car yourself, have the space and tools, and mainly need light upkeep, DIY can cover a lot. If your car needs heavy restoration work, like paint correction or ceramic coating, a fixed shop with a controlled environment may be the right fit for that specific job. This guide walks through the trade-offs honestly.
+That said, "is mobile detailing worth it" depends on what you value. If you enjoy washing your car yourself, have the space and tools, and mainly need light upkeep, DIY can cover a lot. Even bigger jobs like paint correction and ceramic coating can be done on site, as long as there's a suitable shaded, dry spot to work. This guide walks through the trade-offs honestly.
 
 ## Is Car Detailing Worth It in the First Place?
 
@@ -349,14 +349,14 @@ Mobile detailing vs shop isn't a battle with one winner. Each has strengths.
 - No drop-off logistics or rides needed
 - Works at home, the office or a condo stall (within building rules)
 - Ideal for interior detailing, exterior detailing, shampoo, conditioning and restoration services like headlight and trim work
+- Paint correction and ceramic coating, when there's a garage, carport or covered stall to work in
 
 **Where a fixed shop can make more sense**
 
-- Multi-day jobs like ceramic coating, which need a controlled, covered, dust-free space to cure
-- Heavy paint correction that benefits from specialized lighting and a climate-controlled bay
+- Ceramic coating when there's no covered, dry spot at your location for the coating to cure
 - Bodywork, window tint or PPF installation
 
-Net Automotive Detailing is a fully mobile service focused on interior and exterior detailing and restoration work. We don't do ceramic coating, paint correction or PPF. If that's what your car needs, a specialized shop is the right call, and we'll tell you so.
+Net Automotive Detailing is a fully mobile service covering interior and exterior detailing, restoration work, [paint correction](/services/paint-correction) and [ceramic coating](/services/ceramic-coating). We don't do bodywork, window tint or PPF. If that's what your car needs, a specialized shop is the right call, and we'll tell you so.
 
 ## What About Doing It Yourself?
 
@@ -393,7 +393,7 @@ To be fair, there are situations where it might not be the best use of your mone
 
 - The car is already immaculate and only needs a light rinse
 - You genuinely enjoy detailing and have the space, tools and time
-- The job you need, like ceramic coating, really belongs in a dedicated facility
+- The job you need, like bodywork or PPF, really belongs in a dedicated facility
 
 ## How to Get the Most Value From a Mobile Detail
 
@@ -407,7 +407,7 @@ To be fair, there are situations where it might not be the best use of your mone
 
 ### Is mobile detailing as good as a shop?
 
-For interior and exterior detailing, shampoo, conditioning and restoration services, a skilled mobile detailer can deliver the same quality as a shop. For jobs that need a controlled facility, like ceramic coating, a shop is usually the better choice.
+For interior and exterior detailing, shampoo, conditioning and restoration services, a skilled mobile detailer can deliver the same quality as a shop. Paint correction and ceramic coating can be done on site too, given a shaded, dry spot. Jobs like bodywork and PPF are better suited to a shop.
 
 ### Is mobile detailing more expensive than going to a shop?
 

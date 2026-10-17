@@ -49,13 +49,16 @@ const step = (n: number) => ({ "--enter-step": n }) as CSSProperties;
 
 const serviceCards = [
   { slug: "interior-detail", name: "Interior Detail", description: "Steam, vacuum, and deep-clean every surface inside your vehicle." },
-  { slug: "exterior-detail", name: "Exterior Detail", description: "Hand wash, decontamination, dry, dressing, and tire shine." },
+  { slug: "exterior-detail", name: "Exterior Detail", description: "Full body hand wash, decontamination, dry, dressing, and tire shine." },
+  { slug: "ceramic-coating", name: "Ceramic Coating", description: "Long-term, hydrophobic paint protection against sun and salt." },
+  { slug: "paint-correction", name: "Paint Correction", description: "Machine polishing removes swirls, light scratches, and etching." },
   { slug: "carpet-shampoo", name: "Carpet Shampoo", description: "Hot-water extraction removes embedded sand, stains, and odors." },
   { slug: "seat-shampoo", name: "Seat Shampoo", description: "Deep extraction cleaning for fabric seats and stain removal." },
   { slug: "leather-conditioning", name: "Leather Conditioning", description: "UV-protective conditioning for Hawaii's heat and humidity." },
   { slug: "clay-bar-treatment", name: "Clay Bar Treatment", description: "Glass-smooth paint through professional decontamination." },
   { slug: "exterior-spray-wax", name: "Exterior Spray Wax", description: "Quick-application paint protection and gloss boost." },
-  { slug: "rim-detailing", name: "Rim Detailing", description: "Deep barrel cleaning and brake dust removal for every wheel." },
+  { slug: "rim-detailing", name: "Rim Detailing", description: "Wheel washing, deep barrel cleaning, and brake dust removal." },
+  { slug: "engine-detailing", name: "Engine Detailing", description: "Safe engine bay degreasing, cleaning, and dressing." },
   { slug: "headlight-restoration", name: "Headlight Restoration", description: "Sand, polish, and UV-seal cloudy headlights to like-new clarity." },
   { slug: "plastic-color-restoration", name: "Plastic Color Restoration", description: "Restore faded black plastic trim with UV-resistant finish." },
 ];
@@ -241,7 +244,7 @@ export default function HomePage() {
               subtitle="Interior, exterior, and restoration services delivered to your door — anywhere on Oahu."
             />
           </Reveal>
-          <ServiceShowcase services={serviceCards} />
+          <ServiceShowcase services={serviceCards} moreHref="/services" />
           <div className="text-center mt-10">
             <Link
               href="/services"

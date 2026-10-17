@@ -14,13 +14,15 @@ interface ServiceShowcaseProps {
   services: ShowcaseService[];
   /** How many leading services get the large feature tiles. */
   featured?: number;
+  /** Appends a closing "view all" tile linking here, which also squares off the grid's last row. */
+  moreHref?: string;
 }
 
 /**
  * Photo-led bento grid of services. Each tile's photo drifts with scroll and
  * zooms on hover; the whole tile is the link.
  */
-export default function ServiceShowcase({ services, featured = 2 }: ServiceShowcaseProps) {
+export default function ServiceShowcase({ services, featured = 2, moreHref }: ServiceShowcaseProps) {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 auto-rows-[190px] sm:auto-rows-[220px] lg:auto-rows-[230px] gap-3 md:gap-4">
       {services.map((s, i) => {
@@ -88,6 +90,22 @@ export default function ServiceShowcase({ services, featured = 2 }: ServiceShowc
           </Reveal>
         );
       })}
+      {moreHref && (
+        <Reveal as="div" variant="zoom" delay={350}>
+          <Link
+            href={moreHref}
+            className="service-tile group relative flex h-full flex-col justify-end gap-1.5 rounded-2xl p-4 md:p-6"
+            style={{ backgroundColor: "#F08C2A" }}
+          >
+            <span className="font-bold text-white leading-tight text-base md:text-lg" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+              All {services.length} services
+            </span>
+            <span className="inline-flex items-center gap-1 text-sm font-semibold text-white">
+              View all <span className="arrow-nudge" aria-hidden="true">→</span>
+            </span>
+          </Link>
+        </Reveal>
+      )}
     </div>
   );
 }

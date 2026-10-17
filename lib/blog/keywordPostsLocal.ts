@@ -603,7 +603,7 @@ Products matter here too. In Hawaii's heat, a heavy, greasy dressing on the dash
 
 Detailing businesses differ in what they offer. Some focus on cleaning and protection, while others offer specialized work like paint correction or ceramic coating. Neither is better in the abstract; it depends on what your car needs. If a detailer does not offer a service, a good one will say so plainly instead of stretching a different service to fit.
 
-Net Automotive Detailing focuses on 10 services: interior detail, exterior detail, carpet shampoo, seat shampoo, leather conditioning, clay bar treatment, exterior spray wax, rim detailing, headlight restoration and plastic color restoration. You can see all of them on our [services page](/services).
+Net Automotive Detailing offers 13 services: interior detail, exterior detail, ceramic coating, paint correction, carpet shampoo, seat shampoo, leather conditioning, clay bar treatment, exterior spray wax, rim detailing, engine detailing, headlight restoration and plastic color restoration. You can see all of them on our [services page](/services).
 
 ## Frequently Asked Questions
 

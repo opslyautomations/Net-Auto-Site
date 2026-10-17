@@ -15,19 +15,22 @@ import { media } from "@/lib/media";
 
 export const metadata: Metadata = buildMetadata({
   title: "Mobile Detailing Services Oahu | Net Automotive",
-  description: "All mobile auto detailing services on Oahu — interior, exterior, carpet shampoo, leather care, headlight restoration & more. We come to you. Get a free quote.",
+  description: "All mobile detailing services on Oahu: interior, exterior, ceramic coating, paint correction, engine detailing & more. We come to you. Get a free quote.",
   slug: "services",
 });
 
 const serviceIcons: Record<string, string> = {
   "interior-detail": "🚗",
   "exterior-detail": "✨",
+  "ceramic-coating": "💎",
+  "paint-correction": "🌟",
   "carpet-shampoo": "🧽",
   "seat-shampoo": "💺",
   "leather-conditioning": "🛋️",
   "clay-bar-treatment": "🔬",
   "exterior-spray-wax": "🛡️",
   "rim-detailing": "⚙️",
+  "engine-detailing": "🔧",
   "headlight-restoration": "💡",
   "plastic-color-restoration": "⬛",
 };

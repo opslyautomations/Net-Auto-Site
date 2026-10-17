@@ -21,8 +21,8 @@ export const services: Service[] = [
   {
     slug: "interior-detail",
     name: "Interior Detail",
-    metaTitle: "Interior Car Cleaning & Detailing Oahu | Mobile",
-    metaDescription: "Interior car cleaning on Oahu at your driveway, office, or condo. Steam cleaning, vacuum, and odor removal across Honolulu and the island. Get a free quote.",
+    metaTitle: "Interior Car Cleaning & Vacuuming Oahu | Mobile",
+    metaDescription: "Interior car cleaning on Oahu at your driveway, office, or condo. Interior vacuuming, steam cleaning, odor removal, and scenting across the island. Get a free quote.",
     h1: "Mobile Interior Car Cleaning & Detailing on Oahu",
     tagline: "A spotless cabin, delivered to your driveway.",
     intro: "Your car's interior takes a beating — sand from Kailua, fast-food spills, pet hair, and the daily grind of island commuting. Net Automotive Detailing's mobile interior detail service brings professional-grade cleaning to your home, office, or worksite. No drop-off, no waiting — just showroom results wherever you park.",
@@ -35,6 +35,7 @@ export const services: Service[] = [
       "Leather or vinyl conditioning (if applicable)",
       "Odor elimination treatment",
       "Door jamb wipe-down",
+      "Interior scenting to finish (or fragrance-free — just ask)",
     ],
     benefits: [
       { icon: "🚗", title: "We Come to You", description: "No drop-off required — we detail at your driveway, office, or condo." },
@@ -62,12 +63,12 @@ export const services: Service[] = [
     name: "Exterior Detail",
     metaTitle: "Exterior Car Detailing & Mobile Car Wash Oahu",
     metaDescription: "Exterior car detailing on Oahu that goes beyond a mobile car wash: hand wash, decontamination, wheels, and tire shine at your door. Get a free quote.",
-    h1: "Mobile Exterior Car Detailing on Oahu",
+    h1: "Mobile Exterior Car Detailing & Full Body Wash on Oahu",
     tagline: "Salt, sand, and road grime — gone.",
     intro: "Oahu's salt air, trade-wind dust, and intense UV rays attack your car's paint every single day. Net Automotive Detailing's mobile exterior detail service uses a thorough, multi-step hand wash process to remove surface contamination and restore that just-waxed look — without you leaving home.",
     whatsIncluded: [
-      "Two-bucket hand wash method — safe for all paint types",
-      "Wheel and tire cleaning",
+      "Full body hand wash using the two-bucket method — safe for all paint types",
+      "Wheel washing and tire cleaning",
       "Paint decontamination rinse",
       "Clay bar prep (if opted for clay bar service)",
       "Hand dry with microfiber towels",
@@ -96,6 +97,92 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["clay-bar-treatment", "exterior-spray-wax", "rim-detailing"],
+  },
+  {
+    slug: "ceramic-coating",
+    name: "Ceramic Coating",
+    metaTitle: "Ceramic Coating Oahu | Mobile Ceramic Coating",
+    metaDescription: "Mobile ceramic coating on Oahu. Long-term paint protection against Hawaii sun, salt air, and rain, applied after proper prep at your location. Get a free quote.",
+    h1: "Mobile Ceramic Coating on Oahu",
+    tagline: "Long-term protection for paint that lives in the sun and salt.",
+    intro: "Wax wears off in weeks under Hawaii's sun. A ceramic coating bonds to your clear coat and forms a hard, glossy, water-repelling layer that lasts far longer — making salt, red dirt, and bird droppings easier to wash away. Net Automotive Detailing prepares your paint properly and applies the coating at your location, so you get serious protection without dropping your car at a shop.",
+    whatsIncluded: [
+      "Thorough hand wash and wheel cleaning",
+      "Chemical and clay bar decontamination of all painted surfaces",
+      "Paint inspection under proper lighting",
+      "Paint correction to the level your finish needs before coating (quoted up front)",
+      "Panel wipe to remove polishing oils so the coating bonds",
+      "Hand application of ceramic coating to painted surfaces",
+      "Leveling and buffing of each panel for an even, high-gloss finish",
+      "Aftercare guidance for washing and curing in Hawaii's climate",
+    ],
+    benefits: [
+      { icon: "☀️", title: "Built for Island Sun", description: "A ceramic layer helps shield clear coat from UV, salt air, and the fading Hawaii is known for." },
+      { icon: "💧", title: "Hydrophobic Finish", description: "Water beads and sheets off, so rain, sprinkler spots, and dust have less chance to stick." },
+      { icon: "🧽", title: "Easier Washing", description: "Dirt, sand, and red dirt release more easily — maintenance washes go faster and safer." },
+    ],
+    faqs: [
+      {
+        question: "How long does a ceramic coating last in Hawaii?",
+        answer: "Coatings last far longer than wax — typically measured in years rather than weeks — but real-world life depends on the product, how well the paint was prepped, and how the car is washed and parked. We'll explain what to expect for your vehicle when you request a quote.",
+      },
+      {
+        question: "Can ceramic coating be applied at my home?",
+        answer: "Yes. The coating needs a clean, dry, shaded spot to go on and begin curing, such as a garage, carport, or covered parking stall. We'll confirm your location works when you book, and we'll reschedule rather than coat in rain or blowing dust.",
+      },
+      {
+        question: "Do I need paint correction before ceramic coating?",
+        answer: "Almost always some. A coating locks in whatever is underneath it, including swirls and scratches. Newer cars may only need a light polish; older paint may need more. We inspect first and include the right level of correction in your quote.",
+      },
+      {
+        question: "How should I wash a ceramic-coated car?",
+        answer: "Hand wash with a pH-neutral car soap and clean microfiber, and avoid automatic brush washes. Rinse off salt and bird droppings promptly. We'll go over curing time and aftercare when the job is done.",
+      },
+    ],
+    relatedSlugs: ["paint-correction", "exterior-detail", "clay-bar-treatment"],
+  },
+  {
+    slug: "paint-correction",
+    name: "Paint Correction",
+    metaTitle: "Paint Correction Oahu | Swirl & Scratch Removal",
+    metaDescription: "Mobile paint correction on Oahu. Machine polishing removes swirl marks, light scratches, water spot etching, and oxidation to restore gloss. Get a free quote.",
+    h1: "Mobile Paint Correction on Oahu",
+    tagline: "Remove the swirls. Bring back the gloss.",
+    intro: "Swirl marks from automatic car washes, light scratches, etched water spots, and the dull haze Hawaii's sun leaves on paint all live in the clear coat — washing and waxing can't fix them. Net Automotive Detailing's mobile paint correction uses machine polishing to level out those defects and restore depth and shine to your paint, right where you park.",
+    whatsIncluded: [
+      "Thorough hand wash and wheel cleaning",
+      "Iron and clay bar decontamination",
+      "Paint inspection to identify swirls, scratches, and etching",
+      "Masking of trim, badges, and sensitive edges",
+      "Machine compounding and/or polishing matched to your paint's condition",
+      "Panel wipe to reveal true results",
+      "Final inspection under proper lighting",
+      "Protection recommendation: spray wax or ceramic coating",
+    ],
+    benefits: [
+      { icon: "✨", title: "Real Defect Removal", description: "Polishing removes swirls and light scratches instead of filling and hiding them for a few weeks." },
+      { icon: "🌞", title: "Reverses Sun Dullness", description: "Light oxidation and haze from Hawaii's UV can often be polished back to a clear, glossy finish." },
+      { icon: "🛡️", title: "Perfect Coating Prep", description: "Corrected paint is the right foundation for a ceramic coating that locks in the result." },
+    ],
+    faqs: [
+      {
+        question: "Can paint correction remove all scratches?",
+        answer: "It removes swirl marks and light scratches that sit in the clear coat. A scratch you can catch with a fingernail usually goes too deep to polish out completely, though it can often be made much less visible. We'll be honest about what's realistic before we start.",
+      },
+      {
+        question: "Can you remove etched water spots?",
+        answer: "In most cases, yes. Mineral spots that have etched into the clear coat can usually be leveled with machine polishing. Very deep etching may only partially improve, and we'll tell you that up front.",
+      },
+      {
+        question: "Will paint correction fix peeling clear coat?",
+        answer: "No. When the clear coat is peeling or flaking, the protective layer is already gone and the panel needs to be refinished by a body shop. Correction works on clear coat that is still intact.",
+      },
+      {
+        question: "How do I keep the results after paint correction?",
+        answer: "Protect the paint right away — with spray wax for short-term protection or a ceramic coating for long-term protection — and hand wash instead of using brush car washes, which is what creates swirls in the first place.",
+      },
+    ],
+    relatedSlugs: ["ceramic-coating", "clay-bar-treatment", "exterior-spray-wax"],
   },
   {
     slug: "carpet-shampoo",
@@ -270,7 +357,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: "How long does spray wax protection last in Hawaii?",
-        answer: "In Hawaii's harsh UV environment, spray wax typically lasts 4–8 weeks. For longer-lasting protection, ask about our clay bar treatment plus sealant combo — it holds up to 6 months.",
+        answer: "In Hawaii's harsh UV environment, spray wax typically lasts 4–8 weeks. For protection that lasts far longer, ask about our ceramic coating service.",
       },
       {
         question: "Is spray wax as good as paste wax?",
@@ -281,14 +368,14 @@ export const services: Service[] = [
         answer: "Yes, as part of our service we wash and dry the vehicle first before applying wax. The surface must be clean and dry — applying wax over dirt creates a swirl-trapping effect.",
       },
     ],
-    relatedSlugs: ["exterior-detail", "clay-bar-treatment", "rim-detailing"],
+    relatedSlugs: ["exterior-detail", "clay-bar-treatment", "ceramic-coating"],
   },
   {
     slug: "rim-detailing",
     name: "Rim Detailing",
     metaTitle: "Rim & Wheel Cleaning Oahu | Brake Dust Removal",
-    metaDescription: "Mobile rim and wheel detailing on Oahu. Deep cleaning of barrel, face, and lug nuts — brake dust removal and wheel restoration. Get a free quote today.",
-    h1: "Wheel & Rim Detailing on Oahu",
+    metaDescription: "Mobile wheel washing and rim detailing on Oahu. Deep cleaning of barrel, face, and lug nuts with brake dust removal and tire dressing. Get a free quote.",
+    h1: "Wheel Washing & Rim Detailing on Oahu",
     tagline: "Clean wheels make the whole car look better.",
     intro: "Brake dust is acidic and bonds to wheel finishes fast — left untreated, it pits and permanently stains your rims. Net Automotive Detailing's mobile wheel detailing service deep-cleans the barrel, face, lug nuts, and inner spokes of every wheel using professional degreasers and iron-dissolving agents designed for serious brake dust removal.",
     whatsIncluded: [
@@ -320,6 +407,45 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["exterior-detail", "exterior-spray-wax", "clay-bar-treatment"],
+  },
+  {
+    slug: "engine-detailing",
+    name: "Engine Detailing",
+    metaTitle: "Engine Bay Detailing Oahu | Mobile Engine Cleaning",
+    metaDescription: "Mobile engine bay detailing on Oahu. Safe degreasing and cleaning of dirt, red dust, and salt buildup, then a protective dressing. Get a free quote.",
+    h1: "Mobile Engine Detailing on Oahu",
+    tagline: "A clean engine bay, done safely in your driveway.",
+    intro: "Under the hood, Oahu cars collect a mix of road grime, red dirt, leaves, and salt residue that holds moisture against metal and rubber. Net Automotive Detailing's mobile engine detailing carefully degreases and cleans your engine bay with low-pressure techniques, protects sensitive components, and finishes plastics and hoses with a clean, non-greasy dressing.",
+    whatsIncluded: [
+      "Cool-down check — we only clean a cool engine",
+      "Covering of sensitive electrical components and intakes",
+      "Removal of leaves and loose debris",
+      "Engine-safe degreaser on greasy and dirty areas",
+      "Agitation with detailing brushes",
+      "Low-pressure rinse or rinseless wipe-down, depending on the vehicle",
+      "Blow-out and hand dry",
+      "Protective dressing on plastics, hoses, and covers",
+    ],
+    benefits: [
+      { icon: "🔧", title: "Safe Technique", description: "Low pressure, covered electronics, and engine-safe products — never a blast with a pressure washer." },
+      { icon: "🌋", title: "Red Dirt & Salt Removal", description: "Clears the dust and salt residue that settle under the hood around Oahu." },
+      { icon: "🔍", title: "Easier to Spot Problems", description: "A clean bay makes leaks and worn hoses easier for you or your mechanic to notice." },
+    ],
+    faqs: [
+      {
+        question: "Is engine detailing safe for my car?",
+        answer: "Yes, when it's done carefully. We work only on a cool engine, cover sensitive electronics and intakes, use engine-safe degreasers, and keep water pressure low. Some vehicles are better suited to a rinseless wipe-down, and we choose the method for your car.",
+      },
+      {
+        question: "Can you detail an engine bay at my home?",
+        answer: "Yes. Like all of our services, engine detailing is fully mobile. We just need access to the vehicle and room to open the hood.",
+      },
+      {
+        question: "Is engine detailing worth it when selling a car?",
+        answer: "A clean engine bay makes a good impression on buyers and makes it easier for them to inspect the car. It pairs well with a full interior and exterior detail before listing.",
+      },
+    ],
+    relatedSlugs: ["exterior-detail", "interior-detail", "rim-detailing"],
   },
   {
     slug: "headlight-restoration",

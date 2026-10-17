@@ -1210,7 +1210,7 @@ Here's a plain-English breakdown.
 
 ## What About Ceramic Coatings?
 
-Ceramic coatings are a separate category — semi-permanent coatings that bond chemically to clear coat and last 1–3+ years. They're significantly more expensive and require professional application on a fully decontaminated and polished surface. For the right vehicle and owner, ceramics are excellent in Hawaii's environment. We recommend discussing with us if you're interested — it's a different investment level and process.
+Ceramic coatings are a separate category — semi-permanent coatings that bond chemically to clear coat and last 1–3+ years. They're significantly more expensive and require professional application on a fully decontaminated and polished surface. For the right vehicle and owner, ceramics are excellent in Hawaii's environment. If you're interested, see our [ceramic coating service](/services/ceramic-coating) — it's a different investment level and process, and we'll help you decide if it fits your car.
 
 ## The Practical Hawaii Recommendation
 

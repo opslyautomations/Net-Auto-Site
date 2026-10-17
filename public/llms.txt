@@ -10,14 +10,17 @@
 - Service Area: All of Oahu, Hawaii
 
 ## Services
-- [Interior Detail](https://www.netautomotivedetailing.com/services/interior-detail): Full interior cleaning — vacuum, steam, dashboard, console, windows, deodorize.
-- [Exterior Detail](https://www.netautomotivedetailing.com/services/exterior-detail): Hand wash, decontamination, dry, dressing, tire shine.
+- [Interior Detail](https://www.netautomotivedetailing.com/services/interior-detail): Full interior cleaning — vacuuming, steam, dashboard, console, windows, deodorize, optional scenting.
+- [Exterior Detail](https://www.netautomotivedetailing.com/services/exterior-detail): Full body hand wash, decontamination, dry, dressing, tire shine.
+- [Ceramic Coating](https://www.netautomotivedetailing.com/services/ceramic-coating): Long-term ceramic paint protection, applied after proper prep and paint correction.
+- [Paint Correction](https://www.netautomotivedetailing.com/services/paint-correction): Machine polishing to remove swirl marks, light scratches, water spot etching, and oxidation.
 - [Carpet Shampoo](https://www.netautomotivedetailing.com/services/carpet-shampoo): Hot-water extraction for carpets and floor mats.
 - [Seat Shampoo](https://www.netautomotivedetailing.com/services/seat-shampoo): Deep extraction cleaning for cloth seats.
 - [Leather Conditioning](https://www.netautomotivedetailing.com/services/leather-conditioning): pH-balanced cleaning and UV-protective conditioning.
 - [Clay Bar Treatment](https://www.netautomotivedetailing.com/services/clay-bar-treatment): Removes embedded contaminants; preps surface for wax.
 - [Exterior Spray Wax](https://www.netautomotivedetailing.com/services/exterior-spray-wax): Quick-application paint protection and gloss boost.
-- [Rim Detailing](https://www.netautomotivedetailing.com/services/rim-detailing): Deep cleaning of wheel barrels, faces, and lugs.
+- [Rim Detailing](https://www.netautomotivedetailing.com/services/rim-detailing): Wheel washing and deep cleaning of wheel barrels, faces, and lugs.
+- [Engine Detailing](https://www.netautomotivedetailing.com/services/engine-detailing): Safe engine bay degreasing, cleaning, and dressing.
 - [Headlight Restoration](https://www.netautomotivedetailing.com/services/headlight-restoration): Sand, polish, and seal cloudy headlights.
 - [Plastic Color Restoration](https://www.netautomotivedetailing.com/services/plastic-color-restoration): Restore faded black plastic trim.
 

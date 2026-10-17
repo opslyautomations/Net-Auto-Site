@@ -7,7 +7,7 @@ import { PHONE, SITE_NAME } from "./constants";
  * Shared renderer for every Open Graph card on the site.
  *
  * Each route segment has an `opengraph-image.tsx` that calls this, so all 61
- * cards (static pages, 10 services, 19 service areas, 23 blog posts) share one
+ * cards (static pages, 13 services, 19 service areas, 23 blog posts) share one
  * layout and stay on-brand without committing 61 PNGs to the repo. Next
  * prerenders them at build time.
  *

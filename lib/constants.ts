@@ -25,12 +25,15 @@ export const COLORS = {
 export const ALL_SERVICE_SLUGS = [
   "interior-detail",
   "exterior-detail",
+  "ceramic-coating",
+  "paint-correction",
   "carpet-shampoo",
   "seat-shampoo",
   "leather-conditioning",
   "clay-bar-treatment",
   "exterior-spray-wax",
   "rim-detailing",
+  "engine-detailing",
   "headlight-restoration",
   "plastic-color-restoration",
 ];

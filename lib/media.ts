@@ -34,6 +34,9 @@ export const media = {
   polisher: stock("paint-polishing-machine", "Machine polisher correcting glossy black paint"),
   paintCorrection: stock("paint-correction-detail", "Detailer polishing the front panel of a black car"),
   headlight: stock("headlight-close-up", "Crystal-clear LED headlight on a red car"),
+  // unsplash.com/photos/JIE9mi-RTKQ, skDfl3anVtM
+  waterBeading: stock("ceramic-water-beading", "Water beading on glossy red paint"),
+  engineBay: stock("engine-bay-detail", "Clean engine bay of a white car with the hood open"),
 
   // Interior — unsplash.com/photos/U4IaoKF5aj4, _vmBjTG5L1g, and Unsplash interior set
   leatherInterior: stock("luxury-leather-interior", "Quilted black leather seats and cockpit of a luxury car"),
@@ -53,12 +56,15 @@ export const media = {
 export const serviceImages: Record<string, MediaImage> = {
   "interior-detail": media.dashboardBrush,
   "exterior-detail": media.handWashCoupe,
+  "ceramic-coating": media.waterBeading,
+  "paint-correction": media.polisher,
   "carpet-shampoo": media.cabin,
   "seat-shampoo": media.rearSeats,
   "leather-conditioning": media.whiteLeather,
   "clay-bar-treatment": media.paintCorrection,
-  "exterior-spray-wax": media.polisher,
+  "exterior-spray-wax": media.spongeWash,
   "rim-detailing": media.tireBrush,
+  "engine-detailing": media.engineBay,
   "headlight-restoration": media.headlight,
   "plastic-color-restoration": media.foamedWheel,
 };
@@ -91,7 +97,8 @@ const postImageRules: [RegExp, MediaImage][] = [
   [/trim|plastic/, media.foamedWheel],
   [/red-dirt|(^|-)rim|wheel|brake/, media.tireBrush],
   [/headlight|sun|uv/, media.headlight],
-  [/ceramic|wax|sealant|clay|water-spot|paint/, media.polisher],
+  [/ceramic/, media.waterBeading],
+  [/wax|sealant|clay|water-spot|paint/, media.polisher],
   [/rust|salt/, media.foamWheel],
   [/condo/, media.handWashCoupe],
   [/car-wash|exterior/, media.snowFoam],

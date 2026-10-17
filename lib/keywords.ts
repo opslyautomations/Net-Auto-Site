@@ -32,16 +32,21 @@ export interface LocationKeywords extends PageKeywords {
 export const serviceKeywords: Record<string, PageKeywords> = {
   "interior-detail": {
     primary: "interior car cleaning oahu",
-    secondary: ["interior car cleaning honolulu", "car interior detailing oahu", "steam cleaning car interior"],
+    secondary: ["interior car cleaning honolulu", "car interior detailing oahu", "auto interior vacuuming", "steam cleaning car interior", "car interior scenting"],
     heading: "Interior Car Cleaning in Honolulu and Across Oahu",
     body: [
       "Interior car cleaning is the most searched-for detailing service on Oahu, and for good reason. Between beach sand ground into the carpet, sunscreen on the door panels, and the musty smell that humidity leaves behind, island cabins get dirty in ways a quick vacuum at the gas station can't fix.",
       "Our mobile interior detail combines a thorough vacuum with steam cleaning of upholstery, panels, vents, and cup holders, so the cabin is sanitized as well as tidy. We bring it to your driveway, office lot, or condo stall anywhere from [Honolulu](/service-areas/honolulu) to [Kapolei](/service-areas/kapolei). If you're dealing with stained carpet or fabric seats, pair it with [carpet shampoo](/services/carpet-shampoo) or [seat shampoo](/services/seat-shampoo) for a deep extraction clean.",
+      "Every interior detail starts with full auto interior vacuuming — seats, carpets, mats, trunk, and the tight gaps where sand hides — and finishes with interior scenting if you'd like it. Prefer no fragrance? Just tell us and we'll skip it.",
     ],
     faqs: [
       {
         question: "How often should I get my car's interior cleaned in Hawaii?",
         answer: "For most Oahu drivers, a professional interior cleaning every 3–4 months keeps sand, humidity, and odors under control. Beach-goers, families with kids or pets, and rideshare drivers usually benefit from every 6–8 weeks.",
+      },
+      {
+        question: "Do you offer interior scenting?",
+        answer: "Yes. We can finish your interior detail with a light scent after the odor treatment, so the cabin smells fresh rather than perfumed. If anyone in the car is sensitive to fragrance, let us know and we'll leave it fragrance-free.",
       },
       {
         question: "Is steam cleaning safe for my car's interior?",
@@ -52,10 +57,10 @@ export const serviceKeywords: Record<string, PageKeywords> = {
   },
   "exterior-detail": {
     primary: "exterior car detailing oahu",
-    secondary: ["mobile car wash oahu", "mobile car wash honolulu", "hand car wash honolulu"],
+    secondary: ["mobile car wash oahu", "mobile car wash honolulu", "full body car wash", "hand car wash honolulu"],
     heading: "More Than a Mobile Car Wash",
     body: [
-      "Plenty of people search for a mobile car wash on Oahu and end up with a quick rinse that leaves swirl marks and water spots behind. An exterior detail is the step up: a careful two-bucket hand wash, wheel cleaning, decontamination, a hand dry with microfiber, and dressing for tires and trim.",
+      "Plenty of people search for a mobile car wash on Oahu and end up with a quick rinse that leaves swirl marks and water spots behind. An exterior detail is the step up: a careful two-bucket full body hand wash, wheel cleaning, decontamination, a hand dry with microfiber, and dressing for tires and trim.",
       "That extra care matters here. Salt air, trade-wind dust, and red dirt are abrasive, and washing them off the wrong way scratches clear coat. Whether you're in a [Honolulu](/service-areas/honolulu) high-rise or a [Kailua](/service-areas/kailua) driveway, we bring a hand-wash-quality exterior detail to you, and you can add [spray wax](/services/exterior-spray-wax) for UV and salt protection.",
     ],
     faqs: [
@@ -65,10 +70,46 @@ export const serviceKeywords: Record<string, PageKeywords> = {
       },
       {
         question: "Can you remove water spots during an exterior detail?",
-        answer: "Fresh mineral spots from sprinklers or rain usually come off during a proper wash and decontamination. Spots that have etched into the clear coat need machine polishing, which is a paint-correction service we don't currently offer — we'll tell you honestly what to expect.",
+        answer: "Fresh mineral spots from sprinklers or rain usually come off during a proper wash and decontamination. Spots that have etched into the clear coat need machine polishing, which our [paint correction](/services/paint-correction) service handles — we'll tell you honestly what to expect.",
       },
     ],
     guides: ["mobile-car-wash-vs-mobile-detailing-oahu", "water-spots-on-car-paint-hawaii", "do-cars-rust-in-hawaii", "remove-red-dirt-from-car-hawaii"],
+  },
+  "ceramic-coating": {
+    primary: "ceramic coating oahu",
+    secondary: ["ceramic coating honolulu", "mobile ceramic coating", "ceramic coating hawaii", "ceramic coating kailua"],
+    heading: "Ceramic Coating for Oahu's Sun, Salt, and Rain",
+    body: [
+      "Ceramic coating is one of the most searched paint-protection services on Oahu because island paint has it rough: strong UV year-round, salt air on every coast, and passing showers that leave mineral spots behind. A coating gives your clear coat a hard, slick layer that lasts far longer than wax and makes all of that easier to wash off.",
+      "The coating is only as good as the paint underneath, so every job starts with a hand wash, decontamination, and the right level of [paint correction](/services/paint-correction) for your finish. We apply the coating at your home, condo, or office in [Honolulu](/service-areas/honolulu), [Kailua](/service-areas/kailua), [Hawaii Kai](/service-areas/hawaii-kai), and across the island, as long as there's a shaded, dry spot to work. Still deciding? Our [ceramic coating vs. wax guide](/blog/ceramic-coating-vs-wax-hawaii) lays out the trade-offs.",
+    ],
+    faqs: [
+      {
+        question: "Is ceramic coating worth it in Hawaii?",
+        answer: "For a car you plan to keep, especially one that parks outdoors or near the ocean, it often is: the coating holds up to sun and salt far longer than wax and makes washing easier. For short-term ownership or tired paint, regular spray wax may be the better value. We'll help you decide.",
+      },
+      {
+        question: "Is ceramic coating better than wax?",
+        answer: "It lasts much longer and resists chemicals and UV better, but it costs more up front and needs proper prep. Wax is cheaper and easy to reapply but wears off in weeks under Hawaii's sun.",
+      },
+    ],
+    guides: ["ceramic-coating-vs-wax-hawaii", "protect-car-from-hawaii-sun", "do-cars-rust-in-hawaii", "spray-wax-vs-paste-wax-vs-sealant"],
+  },
+  "paint-correction": {
+    primary: "paint correction oahu",
+    secondary: ["paint correction honolulu", "swirl mark removal", "car scratch removal oahu", "water spot removal car"],
+    heading: "Paint Correction for Swirls, Water Spots, and Sun-Dulled Paint",
+    body: [
+      "Look at your paint in direct sun. Those spiderweb swirls, fine scratches, and dull patches are defects in the clear coat, and they're common on Oahu cars thanks to brush car washes, gritty trade-wind dust, and mineral-heavy water spots that etch in the heat.",
+      "Paint correction uses machine polishing to level the clear coat and remove those defects instead of hiding them. We inspect first, tell you honestly what will and won't come out, and match the polishing to your paint. Afterward, lock in the result with [spray wax](/services/exterior-spray-wax) or, for long-term protection, a [ceramic coating](/services/ceramic-coating). If water spots are your main concern, start with our [water spot guide](/blog/water-spots-on-car-paint-hawaii).",
+    ],
+    faqs: [
+      {
+        question: "What's the difference between paint correction and a clay bar?",
+        answer: "A clay bar removes contamination sitting on top of the paint so it feels smooth. Paint correction polishes the clear coat itself to remove swirls, light scratches, and etching. Most correction jobs include a clay bar first.",
+      },
+    ],
+    guides: ["water-spots-on-car-paint-hawaii", "ceramic-coating-vs-wax-hawaii", "clay-bar-treatment-explained", "detail-car-before-selling-oahu"],
   },
   "carpet-shampoo": {
     primary: "car carpet cleaning oahu",
@@ -137,7 +178,7 @@ export const serviceKeywords: Record<string, PageKeywords> = {
     faqs: [
       {
         question: "Does a clay bar remove scratches or swirl marks?",
-        answer: "No. Clay removes contamination sitting on top of the paint. Scratches and swirls are defects in the clear coat itself and need machine polishing (paint correction), which we don't currently offer.",
+        answer: "No. Clay removes contamination sitting on top of the paint. Scratches and swirls are defects in the clear coat itself and need machine polishing — that's what our paint correction service is for.",
       },
     ],
     guides: ["clay-bar-treatment-explained", "ceramic-coating-vs-wax-hawaii", "water-spots-on-car-paint-hawaii"],
@@ -147,24 +188,24 @@ export const serviceKeywords: Record<string, PageKeywords> = {
     secondary: ["best car wax for hawaii", "paint protection hawaii", "ceramic coating vs wax"],
     heading: "Car Wax That Stands Up to Salt and Sun",
     body: [
-      "If you're comparing paint protection on Oahu, you've probably seen everything from quick spray waxes to multi-year ceramic coatings. For most daily drivers, a regularly maintained wax is the practical choice: it adds gloss, makes salt and dust easier to wash off, and gives your clear coat a sacrificial layer against UV.",
-      "Our exterior spray wax is applied after washing (and ideally a [clay bar treatment](/services/clay-bar-treatment)) for the best bond. It's quick, affordable to maintain, and easy to refresh every couple of months — which matters when your car lives in the salt air of [Kailua](/service-areas/kailua) or [Hawaii Kai](/service-areas/hawaii-kai).",
+      "If you're comparing paint protection on Oahu, you've probably seen everything from quick spray waxes to multi-year ceramic coatings. For many daily drivers, a regularly maintained wax is the practical choice: it adds gloss, makes salt and dust easier to wash off, and gives your clear coat a sacrificial layer against UV.",
+      "Our exterior spray wax is applied after washing (and ideally a [clay bar treatment](/services/clay-bar-treatment)) for the best bond. It's quick, affordable to maintain, and easy to refresh every couple of months — which matters when your car lives in the salt air of [Kailua](/service-areas/kailua) or [Hawaii Kai](/service-areas/hawaii-kai). Want protection measured in years instead of weeks? Look at [ceramic coating](/services/ceramic-coating).",
     ],
     faqs: [
       {
         question: "Do you offer ceramic coating?",
-        answer: "Not currently. We focus on wash, decontamination, and spray-wax protection that's easy to maintain. If you're weighing the options, our ceramic coating vs. wax guide explains the trade-offs honestly.",
+        answer: "Yes. Spray wax is the quick, easy-to-refresh option; ceramic coating is the long-term one, applied after proper paint prep. Our ceramic coating vs. wax guide explains the trade-offs honestly.",
       },
     ],
     guides: ["ceramic-coating-vs-wax-hawaii", "protect-car-from-hawaii-sun", "do-cars-rust-in-hawaii", "spray-wax-vs-paste-wax-vs-sealant"],
   },
   "rim-detailing": {
     primary: "rim cleaning oahu",
-    secondary: ["wheel cleaning honolulu", "brake dust removal", "tire shine"],
+    secondary: ["wheel washing", "wheel cleaning honolulu", "brake dust removal", "tire shine"],
     heading: "Wheel and Rim Cleaning for H-1 Brake Dust and Red Dirt",
     body: [
       "Stop-and-go traffic on the H-1 coats wheels in brake dust, and brake dust is corrosive — left alone, it pits and stains the finish. Add red dirt in the wheel wells and salt air, and Oahu wheels need more than a quick spray.",
-      "Our rim detailing deep-cleans faces, barrels, and lug nuts with iron-dissolving cleaners and proper brushes, then dresses the tires. It's a good fit for commuters in [Pearl City](/service-areas/pearl-city) and [Aiea](/service-areas/aiea), and anyone driving the red-dirt roads around [Wahiawa](/service-areas/wahiawa).",
+      "Our rim detailing goes beyond a basic wheel washing: it deep-cleans faces, barrels, and lug nuts with iron-dissolving cleaners and proper brushes, then dresses the tires. It's a good fit for commuters in [Pearl City](/service-areas/pearl-city) and [Aiea](/service-areas/aiea), and anyone driving the red-dirt roads around [Wahiawa](/service-areas/wahiawa).",
     ],
     faqs: [
       {
@@ -173,6 +214,16 @@ export const serviceKeywords: Record<string, PageKeywords> = {
       },
     ],
     guides: ["rim-wheel-detailing-brake-dust", "remove-red-dirt-from-car-hawaii"],
+  },
+  "engine-detailing": {
+    primary: "engine detailing oahu",
+    secondary: ["engine bay cleaning", "engine bay detailing honolulu", "mobile engine cleaning"],
+    heading: "Engine Bay Cleaning Without the Pressure-Washer Risk",
+    body: [
+      "Most people never look under the hood until something goes wrong, and on Oahu that's where red dirt, leaves, salt residue, and oily grime quietly pile up. A clean engine bay looks sharp, makes leaks easier to spot, and is a strong selling point when it's time to list the car.",
+      "Our engine detailing is careful by design: a cool engine, covered electronics, engine-safe degreasers, brushes, and low water pressure, finished with a dressing that leaves plastics and hoses looking clean rather than greasy. It pairs well with an [exterior detail](/services/exterior-detail), especially before a sale. See our guide to [detailing a car before selling on Oahu](/blog/detail-car-before-selling-oahu).",
+    ],
+    guides: ["detail-car-before-selling-oahu", "remove-red-dirt-from-car-hawaii", "do-cars-rust-in-hawaii"],
   },
   "headlight-restoration": {
     primary: "headlight restoration oahu",
